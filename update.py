@@ -1,6 +1,7 @@
 import json
 import urllib.parse
 import urllib.request
+from datetime import datetime
 
 USER = "PizzaWIzza"
 
@@ -128,6 +129,27 @@ monthly_req = urllib.request.Request(
 
 with urllib.request.urlopen(monthly_req) as r:
     monthly_result = json.loads(r.read().decode())
+
+today = datetime.today()
+
+target_year = today.year
+target_month = today.month - 1
+
+if target_month == 0:
+    target_month = 12
+    target_year -= 1
+
+completed_last_month = []
+
+for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
+    for entry in anime_list["entries"]:
+        completed = entry["completedAt"]
+
+        if completed["year"] == target_year and completed["month"] == target_month:
+            title = entry["media"]["title"]["english"] or entry["media"]["title"]["romaji"]
+            completed_last_month.append(title)
+
+print(completed_last_month)
 
 print(monthly_result)
 
