@@ -295,10 +295,6 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
      width="900"
      height="{svg_height}">
 
-<rect width="100%"
-      height="100%"
-      fill="#111111"/>
-
 <text x="450"
       y="50"
       text-anchor="middle"
