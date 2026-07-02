@@ -61,8 +61,7 @@ lines = [
     f"{completed} Completed",
     f"{episodes} Episodes",
     f"{days} Days Watched",
-    f"Mean Score ★ {mean}",
-    f"{planned} Planned"
+    f"Mean Score ★ {mean}"
 ]
 
 params = {
