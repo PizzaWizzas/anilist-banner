@@ -49,6 +49,32 @@ query ($name: String) {
 }
 """
 
+monthly_query = """
+query ($name: String) {
+  MediaListCollection(
+    userName: $name
+    type: ANIME
+    status: COMPLETED
+  ) {
+    lists {
+      entries {
+        completedAt {
+          year
+          month
+          day
+        }
+        media {
+          title {
+            english
+            romaji
+          }
+        }
+      }
+    }
+  }
+}
+"""
+
 data = json.dumps({
     "query": query,
     "variables": {"name": USER}
@@ -56,6 +82,11 @@ data = json.dumps({
 
 watching_data = json.dumps({
     "query": watching_query,
+    "variables": {"name": USER}
+}).encode()
+
+monthly_data = json.dumps({
+    "query": monthly_query,
     "variables": {"name": USER}
 }).encode()
 
@@ -84,6 +115,21 @@ watching_req = urllib.request.Request(
 
 with urllib.request.urlopen(watching_req) as r:
     watching_result = json.loads(r.read().decode())
+
+monthly_req = urllib.request.Request(
+    "https://graphql.anilist.co",
+    data=monthly_data,
+    headers={
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "PizzaWizzas-AniList-Banner/1.0"
+    }
+)
+
+with urllib.request.urlopen(monthly_req) as r:
+    monthly_result = json.loads(r.read().decode())
+
+print(monthly_result)
 
 watching_lines = ["Currently Watching", ""]
 
