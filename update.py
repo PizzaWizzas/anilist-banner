@@ -239,51 +239,95 @@ with open("banner.svg", "wb") as f:
 
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
-anime_text = ""
+# ------------------------
+# Build Monthly Recap Text
+# ------------------------
 
-y = 140
+anime_text = ""
+line_count = 0
 
 for anime in completed_last_month:
-    wrapped = textwrap.wrap(anime, width=68)
+    wrapped = textwrap.wrap(anime, width=58)
 
     for i, line in enumerate(wrapped):
-        x = 45 if i == 0 else 68
+        x = 40 if i == 0 else 62
         prefix = "✓ " if i == 0 else ""
 
         anime_text += f"""
-<text x="{x}" y="{y}"
+<text x="{x}" y="{150 + line_count * 24}"
       fill="white"
       font-size="18"
       font-family="Arial">
     {prefix}{line}
+</text>"""
+
+        line_count += 1
+
+    # Extra spacing between anime
+    line_count += 1
+
+# ------------------------
+# Footer
+# ------------------------
+
+footer_y = 150 + line_count * 24 + 10
+
+anime_text += f"""
+<line x1="40"
+      y1="{footer_y}"
+      x2="860"
+      y2="{footer_y}"
+      stroke="#444"
+      stroke-width="1"/>
+
+<text x="40"
+      y="{footer_y + 35}"
+      fill="#b0b0b0"
+      font-size="18"
+      font-family="Arial">
+    Total Completed: {len(completed_last_month)}
 </text>
 """
-        y += 24
 
-    y += 6
+# ------------------------
+# SVG Size
+# ------------------------
 
-svg_height = 170 + len(completed_last_month) * 30
+svg_height = footer_y + 60
 
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="{svg_height}">
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="{svg_height}">
 
-<rect width="100%" height="100%" fill="#111111"/>
+<rect width="100%"
+      height="100%"
+      fill="#111111"/>
 
-<text x="300" y="50"
+<text x="450"
+      y="50"
       text-anchor="middle"
       fill="white"
       font-size="28"
       font-family="Arial"
       font-weight="bold">
-    MONTHLY RECAP
+MONTHLY RECAP
 </text>
 
-<text x="300" y="85"
+<text x="450"
+      y="85"
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
       font-family="Arial">
-    {month_name} {target_year}
+{month_name} {target_year}
 </text>
+
+<line x1="40"
+      y1="110"
+      x2="860"
+      y2="110"
+      stroke="#444"
+      stroke-width="1"/>
 
 {anime_text}
 
