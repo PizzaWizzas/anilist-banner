@@ -28,9 +28,9 @@ query ($name: String) {
 """
 
 watching_query = """
-query ($id: Int) {
+query ($name: String) {
   MediaListCollection(
-    userId: $id
+    userName: $name
     type: ANIME
     status: CURRENT
   ) {
