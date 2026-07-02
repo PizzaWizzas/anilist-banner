@@ -248,7 +248,7 @@ for anime in completed_last_month:
 
     for i, line in enumerate(wrapped):
         x = 70 if i == 0 else 92
-      prefix = "✓ " if i == 0 else ""
+        prefix = "✓ " if i == 0 else ""
 
         anime_text += f"""
 <text x="{x}" y="{y}"
@@ -261,7 +261,7 @@ for anime in completed_last_month:
         y += 24
 
     y += 6
-    
+
 svg_height = 170 + len(completed_last_month) * 30
 
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="{svg_height}">
