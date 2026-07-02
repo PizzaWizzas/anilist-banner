@@ -27,6 +27,27 @@ query ($name: String) {
 }
 """
 
+watching_query = """
+query ($id: Int) {
+  MediaListCollection(
+    userId: $id
+    type: ANIME
+    status: CURRENT
+  ) {
+    lists {
+      entries {
+        media {
+          title {
+            romaji
+          }
+          status
+        }
+      }
+    }
+  }
+}
+"""
+
 data = json.dumps({
     "query": query,
     "variables": {"name": USER}
