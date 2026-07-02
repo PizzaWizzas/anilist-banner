@@ -6,8 +6,17 @@
       text-anchor="middle"
       fill="white"
       font-size="28"
-      font-family="Arial">
+      font-family="Arial"
+      font-weight="bold">
     MONTHLY RECAP
+</text>
+
+<text x="300" y="85"
+      text-anchor="middle"
+      fill="#b0b0b0"
+      font-size="18"
+      font-family="Arial">
+    June 2026
 </text>
 
 </svg>
