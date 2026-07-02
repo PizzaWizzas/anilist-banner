@@ -247,14 +247,15 @@ for anime in completed_last_month:
     wrapped = textwrap.wrap(anime, width=50)
 
     for i, line in enumerate(wrapped):
-        bullet = "✓ " if i == 0 else "   "
+        x = 70 if i == 0 else 92
+prefix = "✓ " if i == 0 else ""
 
         anime_text += f"""
-<text x="70" y="{y}"
+<text x="{x}" y="{y}"
       fill="white"
       font-size="18"
       font-family="Arial">
-    {bullet}{line}
+    {prefix}{line}
 </text>
 """
         y += 24
