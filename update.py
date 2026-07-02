@@ -53,6 +53,11 @@ data = json.dumps({
     "variables": {"name": USER}
 }).encode()
 
+watching_data = json.dumps({
+    "query": watching_query,
+    "variables": {"name": USER}
+}).encode()
+
 req = urllib.request.Request(
     "https://graphql.anilist.co",
     data=data,
@@ -66,6 +71,21 @@ req = urllib.request.Request(
 with urllib.request.urlopen(req) as r:
     result = json.loads(r.read().decode())
 
+watching_req = urllib.request.Request(
+    "https://graphql.anilist.co",
+    data=watching_data,
+    headers={
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "PizzaWizzas-AniList-Banner/1.0"
+    }
+)
+
+with urllib.request.urlopen(watching_req) as r:
+    watching_result = json.loads(r.read().decode())
+
+print(watching_result)
+  
 anime = result["data"]["User"]["statistics"]["anime"]
 
 completed = anime["count"]
