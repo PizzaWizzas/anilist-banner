@@ -78,16 +78,9 @@ params = {
 
 url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
 
-html = f"""<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="refresh" content="0; url={url}">
-</head>
-<body></body>
-</html>
-"""
+response = urllib.request.urlopen(url)
 
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(html)
+with open("banner.svg", "wb") as f:
+    f.write(response.read())
 
-print("Generated index.html")
+print("Generated banner.svg")
