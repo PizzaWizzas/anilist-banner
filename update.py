@@ -253,7 +253,7 @@ for anime in completed_last_month:
 <text x="{x}" y="{150 + line_count * 24}"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     {prefix}{line}
 </text>"""
 
@@ -280,7 +280,7 @@ anime_text += f"""
       y="{footer_y + 35}"
       fill="#b0b0b0"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     Total Completed: {len(completed_last_month)}
 </text>
 """
@@ -304,7 +304,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
       text-anchor="middle"
       fill="#e13333"
       font-size="28"
-      font-family="JetBrains Mono"
+      font-family="monospace"
       font-weight="bold">
 MONTHLY RECAP
 </text>
@@ -314,7 +314,7 @@ MONTHLY RECAP
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
 {month_name} {target_year}
 </text>
 
