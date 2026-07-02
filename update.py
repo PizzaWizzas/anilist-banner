@@ -238,6 +238,21 @@ with open("banner.svg", "wb") as f:
 
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
+anime_text = ""
+
+y = 140
+
+for anime in completed_last_month:
+    anime_text += f"""
+<text x="40" y="{y}"
+      fill="white"
+      font-size="18"
+      font-family="Arial">
+    • {anime}
+</text>
+"""
+    y += 30
+    
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
 
 <rect width="100%" height="100%" fill="#111111"/>
@@ -259,12 +274,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
     {month_name} {target_year}
 </text>
 
-<text x="40" y="140"
-      fill="white"
-      font-size="18"
-      font-family="Arial">
-    {completed_last_month[0]}
-</text>
+{anime_text}
 
 </svg>"""
 
