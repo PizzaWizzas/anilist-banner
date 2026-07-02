@@ -89,7 +89,7 @@ watching_lines = ["Currently Watching", ""]
 for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
     for entry in anime_list["entries"]:
         if entry["media"]["status"] == "RELEASING":
-            watching_titles.append(entry["media"]["title"]["english"])
+            watching_lines.append(entry["media"]["title"]["english"])
 
 watching_params = {
     "font": "JetBrains Mono",
