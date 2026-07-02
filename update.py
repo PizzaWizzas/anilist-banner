@@ -150,10 +150,6 @@ for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
             title = entry["media"]["title"]["english"] or entry["media"]["title"]["romaji"]
             completed_last_month.append(title)
 
-print(completed_last_month)
-
-print(monthly_result)
-
 watching_lines = ["Currently Watching", ""]
 
 for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
@@ -257,7 +253,7 @@ for anime in completed_last_month:
 <text x="{x}" y="{150 + line_count * 24}"
       fill="white"
       font-size="18"
-      font-family="Arial">
+      font-family="JetBrains Mono">
     {prefix}{line}
 </text>"""
 
@@ -277,14 +273,14 @@ anime_text += f"""
       y1="{footer_y}"
       x2="860"
       y2="{footer_y}"
-      stroke="#444"
+      stroke="#e13333"
       stroke-width="1"/>
 
 <text x="40"
       y="{footer_y + 35}"
       fill="#b0b0b0"
       font-size="18"
-      font-family="Arial">
+      font-family="JetBrains Mono">
     Total Completed: {len(completed_last_month)}
 </text>
 """
@@ -306,9 +302,9 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 <text x="450"
       y="50"
       text-anchor="middle"
-      fill="white"
+      fill="#e13333"
       font-size="28"
-      font-family="Arial"
+      font-family="JetBrains Mono"
       font-weight="bold">
 MONTHLY RECAP
 </text>
@@ -318,7 +314,7 @@ MONTHLY RECAP
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
-      font-family="Arial">
+      font-family="JetBrains Mono">
 {month_name} {target_year}
 </text>
 
@@ -326,7 +322,7 @@ MONTHLY RECAP
       y1="110"
       x2="860"
       y2="110"
-      stroke="#444"
+      stroke="#e13333"
       stroke-width="1"/>
 
 {anime_text}
