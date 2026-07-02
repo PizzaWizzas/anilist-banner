@@ -246,8 +246,17 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
       text-anchor="middle"
       fill="white"
       font-size="28"
-      font-family="Arial">
+      font-family="Arial"
+      font-weight="bold">
     MONTHLY RECAP
+</text>
+
+<text x="300" y="85"
+      text-anchor="middle"
+      fill="#b0b0b0"
+      font-size="18"
+      font-family="Arial">
+    {month_name} {target_year}
 </text>
 
 </svg>"""
