@@ -78,9 +78,15 @@ params = {
 
 url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
 
-response = urllib.request.urlopen(url)
+request = urllib.request.Request(
+    url,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    }
+)
 
-with open("banner.svg", "wb") as f:
-    f.write(response.read())
+with urllib.request.urlopen(request) as response:
+    with open("banner.svg", "wb") as f:
+        f.write(response.read())
 
 print("Generated banner.svg")
