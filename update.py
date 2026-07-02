@@ -85,7 +85,8 @@ request = urllib.request.Request(
     }
 )
 
-svg = response.read()
+with urllib.request.urlopen(request) as response:
+    svg = response.read()
 
 with open("banner.svg", "wb") as f:
     f.write(svg)
