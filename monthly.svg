@@ -11,7 +11,7 @@
       text-anchor="middle"
       fill="#e13333"
       font-size="28"
-      font-family="JetBrains Mono"
+      font-family="monospace"
       font-weight="bold">
 MONTHLY RECAP
 </text>
@@ -21,7 +21,7 @@ MONTHLY RECAP
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
 June 2026
 </text>
 
@@ -36,127 +36,127 @@ June 2026
 <text x="40" y="150"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Witch Hat Atelier
 </text>
 <text x="40" y="198"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ I Made Friends with the Second Prettiest Girl in My Class
 </text>
 <text x="40" y="246"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ MASHLE: MAGIC AND MUSCLES
 </text>
 <text x="40" y="294"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ The Eminence in Shadow Season 2
 </text>
 <text x="40" y="342"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Zom 100: Bucket List of the Dead
 </text>
 <text x="40" y="390"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ You and I Are Polar Opposites
 </text>
 <text x="40" y="438"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ The Angel Next Door Spoils Me Rotten2
 </text>
 <text x="40" y="486"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ The Dangers in My Heart
 </text>
 <text x="40" y="534"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?
 </text>
 <text x="40" y="582"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ The Dangers in My Heart Season 2
 </text>
 <text x="40" y="630"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II
 </text>
 <text x="40" y="678"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III
 </text>
 <text x="40" y="726"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?: Is It
 </text>
 <text x="62" y="750"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     Wrong to Expect a Hot Spring in a Dungeon?
 </text>
 <text x="40" y="798"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II: Is
 </text>
 <text x="62" y="822"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     It Wrong to Go Searching for Herbs on a Deserted Island?
 </text>
 <text x="40" y="870"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III: Is
 </text>
 <text x="62" y="894"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     It Wrong to Try to Find a Hot Spring in Orario? -Bath God
 </text>
 <text x="62" y="918"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     Forever-
 </text>
 <text x="40" y="966"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Black Lagoon: The Second Barrage
 </text>
 <text x="40" y="1014"
       fill="white"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     ✓ Black Lagoon: Roberta's Blood Trail
 </text>
 <line x1="40"
@@ -170,7 +170,7 @@ June 2026
       y="1107"
       fill="#b0b0b0"
       font-size="18"
-      font-family="JetBrains Mono">
+      font-family="monospace">
     Total Completed: 17
 </text>
 
