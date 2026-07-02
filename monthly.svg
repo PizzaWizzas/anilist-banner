@@ -1,163 +1,177 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="1132">
 
-<rect width="100%" height="100%" fill="#111111"/>
+<rect width="100%"
+      height="100%"
+      fill="#111111"/>
 
-<text x="300" y="50"
+<text x="450"
+      y="50"
       text-anchor="middle"
       fill="white"
       font-size="28"
       font-family="Arial"
       font-weight="bold">
-    MONTHLY RECAP
+MONTHLY RECAP
 </text>
 
-<text x="300" y="85"
+<text x="450"
+      y="85"
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
       font-family="Arial">
-    June 2026
+June 2026
 </text>
 
+<line x1="40"
+      y1="110"
+      x2="860"
+      y2="110"
+      stroke="#444"
+      stroke-width="1"/>
 
-<text x="45" y="140"
+
+<text x="40" y="150"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Witch Hat Atelier
 </text>
-
-<text x="45" y="170"
+<text x="40" y="198"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ I Made Friends with the Second Prettiest Girl in My Class
 </text>
-
-<text x="45" y="200"
+<text x="40" y="246"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ MASHLE: MAGIC AND MUSCLES
 </text>
-
-<text x="45" y="230"
+<text x="40" y="294"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ The Eminence in Shadow Season 2
 </text>
-
-<text x="45" y="260"
+<text x="40" y="342"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Zom 100: Bucket List of the Dead
 </text>
-
-<text x="45" y="290"
+<text x="40" y="390"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ You and I Are Polar Opposites
 </text>
-
-<text x="45" y="320"
+<text x="40" y="438"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ The Angel Next Door Spoils Me Rotten2
 </text>
-
-<text x="45" y="350"
+<text x="40" y="486"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ The Dangers in My Heart
 </text>
-
-<text x="45" y="380"
+<text x="40" y="534"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?
 </text>
-
-<text x="45" y="410"
+<text x="40" y="582"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ The Dangers in My Heart Season 2
 </text>
-
-<text x="45" y="440"
+<text x="40" y="630"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II
 </text>
-
-<text x="45" y="470"
+<text x="40" y="678"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III
 </text>
-
-<text x="45" y="500"
+<text x="40" y="726"
       fill="white"
       font-size="18"
       font-family="Arial">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?: Is It Wrong to
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?: Is It
 </text>
-
-<text x="68" y="524"
+<text x="62" y="750"
       fill="white"
       font-size="18"
       font-family="Arial">
-    Expect a Hot Spring in a Dungeon?
+    Wrong to Expect a Hot Spring in a Dungeon?
 </text>
-
-<text x="45" y="554"
+<text x="40" y="798"
       fill="white"
       font-size="18"
       font-family="Arial">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II: Is It Wrong to
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II: Is
 </text>
-
-<text x="68" y="578"
+<text x="62" y="822"
       fill="white"
       font-size="18"
       font-family="Arial">
-    Go Searching for Herbs on a Deserted Island?
+    It Wrong to Go Searching for Herbs on a Deserted Island?
 </text>
-
-<text x="45" y="608"
+<text x="40" y="870"
       fill="white"
       font-size="18"
       font-family="Arial">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III: Is It Wrong
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III: Is
 </text>
-
-<text x="68" y="632"
+<text x="62" y="894"
       fill="white"
       font-size="18"
       font-family="Arial">
-    to Try to Find a Hot Spring in Orario? -Bath God Forever-
+    It Wrong to Try to Find a Hot Spring in Orario? -Bath God
 </text>
-
-<text x="45" y="662"
+<text x="62" y="918"
+      fill="white"
+      font-size="18"
+      font-family="Arial">
+    Forever-
+</text>
+<text x="40" y="966"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Black Lagoon: The Second Barrage
 </text>
-
-<text x="45" y="692"
+<text x="40" y="1014"
       fill="white"
       font-size="18"
       font-family="Arial">
     ✓ Black Lagoon: Roberta's Blood Trail
+</text>
+<line x1="40"
+      y1="1072"
+      x2="860"
+      y2="1072"
+      stroke="#444"
+      stroke-width="1"/>
+
+<text x="40"
+      y="1107"
+      fill="#b0b0b0"
+      font-size="18"
+      font-family="Arial">
+    Total Completed: 17
 </text>
 
 
