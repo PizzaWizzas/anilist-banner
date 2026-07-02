@@ -39,6 +39,7 @@ query ($name: String) {
         media {
           title {
             romaji
+            english
           }
           status
         }
