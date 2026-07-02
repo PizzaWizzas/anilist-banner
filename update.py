@@ -65,7 +65,7 @@ lines = [
 ]
 
 params = {
-    "font": "Fira Code",
+    "font": "JetBrains Mono",
     "size": "15",
     "duration": "2300",
     "pause": "700",
