@@ -244,10 +244,10 @@ anime_text = ""
 y = 140
 
 for anime in completed_last_month:
-    wrapped = textwrap.wrap(anime, width=50)
+    wrapped = textwrap.wrap(anime, width=68)
 
     for i, line in enumerate(wrapped):
-        x = 70 if i == 0 else 92
+        x = 45 if i == 0 else 68
         prefix = "✓ " if i == 0 else ""
 
         anime_text += f"""
