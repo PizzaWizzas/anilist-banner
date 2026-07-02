@@ -250,7 +250,8 @@ for anime in completed_last_month:
         bullet = "• " if i == 0 else "  "
 
         anime_text += f"""
-<text x="40" y="{y}"
+<text x="450" y="{y}"
+      text-anchor="middle"
       fill="white"
       font-size="18"
       font-family="Arial">
@@ -263,7 +264,7 @@ for anime in completed_last_month:
     
 svg_height = 170 + len(completed_last_month) * 30
 
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="750" height="{svg_height}">
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="{svg_height}">
 
 <rect width="100%" height="100%" fill="#111111"/>
 
