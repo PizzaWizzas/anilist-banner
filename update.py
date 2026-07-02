@@ -1,11 +1,12 @@
 import json
+import urllib.parse
 import urllib.request
 
-USER_ID = 713691
+USER = "PizzaWIzza"
 
 query = """
-query ($id: Int) {
-  User(id: $id) {
+query ($name: String) {
+  User(name: $name) {
     statistics {
       anime {
         count
@@ -14,20 +15,24 @@ query ($id: Int) {
         meanScore
       }
     }
+    statistics {
+      anime {
+        statuses {
+          status
+          count
+        }
+      }
+    }
   }
 }
 """
 
-variables = {
-    "id": USER_ID
-}
-
 data = json.dumps({
     "query": query,
-    "variables": variables
-}).encode("utf-8")
+    "variables": {"name": USER}
+}).encode()
 
-request = urllib.request.Request(
+req = urllib.request.Request(
     "https://graphql.anilist.co",
     data=data,
     headers={
@@ -37,7 +42,53 @@ request = urllib.request.Request(
     }
 )
 
-with urllib.request.urlopen(request) as response:
-    result = json.loads(response.read().decode())
+with urllib.request.urlopen(req) as r:
+    result = json.loads(r.read().decode())
 
-print(result)
+anime = result["data"]["User"]["statistics"]["anime"]
+
+completed = anime["count"]
+episodes = anime["episodesWatched"]
+days = round(anime["minutesWatched"] / 60 / 24, 1)
+mean = anime["meanScore"]
+
+planned = 0
+for s in anime["statuses"]:
+    if s["status"] == "PLANNING":
+        planned = s["count"]
+
+lines = [
+    f"{completed} Completed",
+    f"{episodes} Episodes",
+    f"{days} Days Watched",
+    f"Mean Score ★ {mean}",
+    f"{planned} Planned"
+]
+
+params = {
+    "font": "Fira Code",
+    "size": "15",
+    "duration": "2300",
+    "pause": "700",
+    "color": "DC2626",
+    "center": "true",
+    "vCenter": "true",
+    "width": "380",
+    "lines": ";".join(lines)
+}
+
+url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
+
+html = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url={url}">
+</head>
+<body></body>
+</html>
+"""
+
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html)
+
+print("Generated index.html")
