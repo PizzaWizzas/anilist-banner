@@ -85,7 +85,16 @@ with urllib.request.urlopen(watching_req) as r:
     watching_result = json.loads(r.read().decode())
 
 print(watching_result)
-  
+
+watching_titles = []
+
+for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
+    for entry in anime_list["entries"]:
+        if entry["media"]["status"] == "RELEASING":
+            watching_titles.append(entry["media"]["title"]["romaji"])
+
+print(watching_titles)
+
 anime = result["data"]["User"]["statistics"]["anime"]
 
 completed = anime["count"]
