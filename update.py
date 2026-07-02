@@ -84,16 +84,42 @@ watching_req = urllib.request.Request(
 with urllib.request.urlopen(watching_req) as r:
     watching_result = json.loads(r.read().decode())
 
-print(watching_result)
-
-watching_titles = []
+watching_lines = ["Currently Watching", ""]
 
 for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
     for entry in anime_list["entries"]:
         if entry["media"]["status"] == "RELEASING":
-            watching_titles.append(entry["media"]["title"]["romaji"])
+            watching_lines.append(entry["media"]["title"]["romaji"])
 
-print(watching_titles)
+watching_params = {
+    "font": "JetBrains Mono",
+    "size": "15",
+    "duration": "2300",
+    "pause": "700",
+    "color": "DC2626",
+    "center": "true",
+    "vCenter": "true",
+    "width": "380",
+    "lines": ";".join(watching_lines)
+}
+
+watching_url = (
+    "https://readme-typing-svg.demolab.com/?"
+    + urllib.parse.urlencode(watching_params)
+)
+
+watching_req = urllib.request.Request(
+    watching_url,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    }
+)
+
+with urllib.request.urlopen(watching_req) as r:
+    watching_svg = r.read()
+
+with open("watching.svg", "wb") as f:
+    f.write(watching_svg)
 
 anime = result["data"]["User"]["statistics"]["anime"]
 
