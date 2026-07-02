@@ -2,6 +2,7 @@ import json
 import urllib.parse
 import urllib.request
 from datetime import datetime
+import textwrap
 
 USER = "PizzaWIzza"
 
@@ -243,15 +244,22 @@ anime_text = ""
 y = 140
 
 for anime in completed_last_month:
-    anime_text += f"""
+    wrapped = textwrap.wrap(anime, width=35)
+
+    for i, line in enumerate(wrapped):
+        bullet = "• " if i == 0 else "  "
+
+        anime_text += f"""
 <text x="40" y="{y}"
       fill="white"
       font-size="18"
       font-family="Arial">
-    • {anime}
+    {bullet}{line}
 </text>
 """
-    y += 30
+        y += 24
+
+    y += 6
     
 svg_height = 170 + len(completed_last_month) * 30
 
