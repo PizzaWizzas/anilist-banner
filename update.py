@@ -30,7 +30,11 @@ data = json.dumps({
 request = urllib.request.Request(
     "https://graphql.anilist.co",
     data=data,
-    headers={"Content-Type": "application/json"}
+    headers={
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "PizzaWizzas-AniList-Banner/1.0"
+    }
 )
 
 with urllib.request.urlopen(request) as response:
