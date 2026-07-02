@@ -253,7 +253,9 @@ for anime in completed_last_month:
 """
     y += 30
     
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+svg_height = 170 + len(completed_last_month) * 30
+
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{svg_height}">
 
 <rect width="100%" height="100%" fill="#111111"/>
 
