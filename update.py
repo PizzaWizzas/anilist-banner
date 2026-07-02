@@ -236,4 +236,23 @@ with urllib.request.urlopen(request) as response:
 with open("banner.svg", "wb") as f:
     f.write(svg)
 
-print("Generated banner.svg and watching.svg")
+month_name = datetime(target_year, target_month, 1).strftime("%B")
+
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+
+<rect width="100%" height="100%" fill="#111111"/>
+
+<text x="300" y="50"
+      text-anchor="middle"
+      fill="white"
+      font-size="28"
+      font-family="Arial">
+    MONTHLY RECAP
+</text>
+
+</svg>"""
+
+with open("monthly.svg", "w", encoding="utf-8") as f:
+    f.write(svg)
+
+print("Generated banner.svg, watching.svg, and monthly.svg")
