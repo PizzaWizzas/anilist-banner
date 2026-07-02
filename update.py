@@ -167,7 +167,4 @@ with urllib.request.urlopen(request) as response:
 with open("banner.svg", "wb") as f:
     f.write(svg)
 
-with open("watching.svg", "wb") as f:
-    f.write(svg)
-
 print("Generated banner.svg and watching.svg")
