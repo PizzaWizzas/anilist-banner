@@ -58,8 +58,8 @@ for s in anime["statuses"]:
         planned = s["count"]
 
 lines = [
-    f"{completed} Completed",
-    f"{episodes} Episodes",
+    f"{completed} Anime Completed",
+    f"{episodes} Episodes Watched",
     f"{days} Days Watched",
     f"Mean Score ★ {mean}"
 ]
