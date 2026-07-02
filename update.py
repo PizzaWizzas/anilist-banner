@@ -259,6 +259,13 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
     {month_name} {target_year}
 </text>
 
+<text x="40" y="140"
+      fill="white"
+      font-size="18"
+      font-family="Arial">
+    {completed_last_month[0]}
+</text>
+
 </svg>"""
 
 with open("monthly.svg", "w", encoding="utf-8") as f:
