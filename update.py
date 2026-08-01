@@ -250,7 +250,7 @@ for number, anime in enumerate(completed_last_month, start=1):
     wrapped = textwrap.wrap(anime, width=58)
 
     for i, line in enumerate(wrapped):
-        x = 40 if i == 0 else 62
+        x = 40 if i == 0 else 76
         prefix = f"{number}. " if i == 0 else ""
 
         anime_text += f"""
