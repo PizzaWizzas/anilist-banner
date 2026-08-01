@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="604">
+     height="556">
 
 <text x="450"
       y="50"
@@ -57,41 +57,29 @@ July 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part
+    5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part 2
 </text>
-<text x="62" y="366"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    2
-</text>
-<text x="40" y="414"
+<text x="40" y="390"
       fill="white"
       font-size="18"
       font-family="monospace">
     6. Is It Wrong To Try To Pick Up Girls in a Dungeon? V
 </text>
-<text x="40" y="462"
+<text x="40" y="438"
       fill="white"
       font-size="18"
       font-family="monospace">
-    7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow
-</text>
-<text x="62" y="486"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    of the Orion
+    7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
 </text>
 <line x1="40"
-      y1="544"
+      y1="496"
       x2="860"
-      y2="544"
+      y2="496"
       stroke="#e13333"
       stroke-width="1"/>
 
 <text x="40"
-      y="579"
+      y="531"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
