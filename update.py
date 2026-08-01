@@ -3,6 +3,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime
 import textwrap
+import html
 
 USER = "PizzaWIzza"
 
@@ -147,7 +148,10 @@ for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
         completed = entry["completedAt"]
 
         if completed["year"] == target_year and completed["month"] == target_month:
-            title = entry["media"]["title"]["english"] or entry["media"]["title"]["romaji"]
+            title = html.escape(
+    entry["media"]["title"]["english"] or
+    entry["media"]["title"]["romaji"]
+)
             completed_last_month.append(title)
 
 watching_lines = ["Currently Watching", ""]
