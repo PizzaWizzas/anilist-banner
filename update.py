@@ -300,7 +300,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
      height="{svg_height}">
 
 <text x="450"
-      y="50"
+      y="70"
       text-anchor="middle"
       fill="#e13333"
       font-size="28"
@@ -310,7 +310,7 @@ MONTHLY RECAP
 </text>
 
 <text x="450"
-      y="85"
+      y="105"
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
@@ -319,7 +319,7 @@ MONTHLY RECAP
 </text>
 
 <line x1="40"
-      y1="110"
+      y1="130"
       x2="860"
       y2="110"
       stroke="#e13333"
