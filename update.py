@@ -246,12 +246,12 @@ month_name = datetime(target_year, target_month, 1).strftime("%B")
 anime_text = ""
 line_count = 0
 
-for anime in completed_last_month:
+for number, anime in enumerate(completed_last_month, start=1):
     wrapped = textwrap.wrap(anime, width=58)
 
     for i, line in enumerate(wrapped):
         x = 40 if i == 0 else 62
-        prefix = "✓ " if i == 0 else ""
+        prefix = f"{number}. " if i == 0 else ""
 
         anime_text += f"""
 <text x="{x}" y="{150 + line_count * 24}"
