@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="1132">
+     height="604">
 
 <text x="450"
       y="50"
@@ -18,7 +18,7 @@ MONTHLY RECAP
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-June 2026
+July 2026
 </text>
 
 <line x1="40"
@@ -33,141 +33,69 @@ June 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ Witch Hat Atelier
+    ✓ The Ramparts of Ice
 </text>
 <text x="40" y="198"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ I Made Friends with the Second Prettiest Girl in My Class
+    ✓ Dororo
 </text>
 <text x="40" y="246"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ MASHLE: MAGIC AND MUSCLES
+    ✓ Love, Chunibyo & Other Delusions
 </text>
 <text x="40" y="294"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ The Eminence in Shadow Season 2
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? IV
 </text>
 <text x="40" y="342"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ Zom 100: Bucket List of the Dead
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part
 </text>
-<text x="40" y="390"
+<text x="62" y="366"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ You and I Are Polar Opposites
+    2
 </text>
-<text x="40" y="438"
+<text x="40" y="414"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ The Angel Next Door Spoils Me Rotten2
+    ✓ Is It Wrong To Try To Pick Up Girls in a Dungeon? V
 </text>
-<text x="40" y="486"
+<text x="40" y="462"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ The Dangers in My Heart
+    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow
 </text>
-<text x="40" y="534"
+<text x="62" y="486"
       fill="white"
       font-size="18"
       font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?
-</text>
-<text x="40" y="582"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ The Dangers in My Heart Season 2
-</text>
-<text x="40" y="630"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II
-</text>
-<text x="40" y="678"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III
-</text>
-<text x="40" y="726"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon?: Is It
-</text>
-<text x="62" y="750"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    Wrong to Expect a Hot Spring in a Dungeon?
-</text>
-<text x="40" y="798"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? II: Is
-</text>
-<text x="62" y="822"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    It Wrong to Go Searching for Herbs on a Deserted Island?
-</text>
-<text x="40" y="870"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Is It Wrong to Try to Pick Up Girls in a Dungeon? III: Is
-</text>
-<text x="62" y="894"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    It Wrong to Try to Find a Hot Spring in Orario? -Bath God
-</text>
-<text x="62" y="918"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    Forever-
-</text>
-<text x="40" y="966"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Black Lagoon: The Second Barrage
-</text>
-<text x="40" y="1014"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    ✓ Black Lagoon: Roberta's Blood Trail
+    of the Orion
 </text>
 <line x1="40"
-      y1="1072"
+      y1="544"
       x2="860"
-      y2="1072"
+      y2="544"
       stroke="#e13333"
       stroke-width="1"/>
 
 <text x="40"
-      y="1107"
+      y="579"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-    Total Completed: 17
+    Total Completed: 7
 </text>
 
 
