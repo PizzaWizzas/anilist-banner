@@ -270,7 +270,7 @@ for number, anime in enumerate(completed_last_month, start=1):
 # Footer
 # ------------------------
 
-footer_y = 150 + line_count * 24 + 10
+footer_y = 170 + line_count * 24 + 10
 
 anime_text += f"""
 <line x1="40"
