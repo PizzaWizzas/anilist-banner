@@ -321,7 +321,7 @@ MONTHLY RECAP
 <line x1="40"
       y1="130"
       x2="860"
-      y2="110"
+      y2="130"
       stroke="#e13333"
       stroke-width="1"/>
 
