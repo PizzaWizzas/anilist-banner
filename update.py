@@ -254,7 +254,7 @@ for number, anime in enumerate(completed_last_month, start=1):
         prefix = f"{number}. " if i == 0 else ""
 
         anime_text += f"""
-<text x="{x}" y="{150 + line_count * 24}"
+<text x="{x}" y="{170 + line_count * 24}"
       fill="white"
       font-size="18"
       font-family="monospace">
