@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="556">
+     height="576">
 
 <text x="450"
       y="70"
@@ -72,14 +72,14 @@ July 2026
     7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
 </text>
 <line x1="40"
-      y1="496"
+      y1="516"
       x2="860"
-      y2="496"
+      y2="516"
       stroke="#e13333"
       stroke-width="1"/>
 
 <text x="40"
-      y="531"
+      y="551"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
