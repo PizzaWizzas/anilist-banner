@@ -162,7 +162,7 @@ for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
             watching_lines.append(entry["media"]["title"]["english"])
 
 watching_params = {
-    "font": "JetBrains Mono",
+    "font": "Arial",
     "size": "15",
     "duration": "2300",
     "pause": "700",
@@ -211,7 +211,7 @@ lines = [
 ]
 
 params = {
-    "font": "JetBrains Mono",
+    "font": "Arial",
     "size": "15",
     "duration": "2300",
     "pause": "700",
@@ -257,7 +257,7 @@ for number, anime in enumerate(completed_last_month, start=1):
 <text x="{x}" y="{170 + line_count * 24}"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     {prefix}{line}
 </text>"""
 
@@ -284,7 +284,7 @@ anime_text += f"""
       y="{footer_y + 35}"
       fill="#b0b0b0"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     Total Completed: {len(completed_last_month)}
 </text>
 """
@@ -304,7 +304,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
       text-anchor="middle"
       fill="#e13333"
       font-size="28"
-      font-family="monospace"
+      font-family="Arial"
       font-weight="bold">
 MONTHLY RECAP
 </text>
@@ -314,7 +314,7 @@ MONTHLY RECAP
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
 {month_name} {target_year}
 </text>
 
