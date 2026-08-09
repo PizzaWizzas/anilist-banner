@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="571">
+     height="591">
 
 <text x="450"
       y="70"
@@ -26,60 +26,60 @@ July 2026
       x2="860"
       y2="130"
       stroke="#DA4127"
-      stroke-width="2"/>
+      stroke-width="1"/>
 
 
-<text x="40" y="165"
+<text x="40" y="185"
       fill="white"
       font-size="18"
       font-family="monospace">
     1. The Ramparts of Ice
 </text>
-<text x="40" y="213"
+<text x="40" y="233"
       fill="white"
       font-size="18"
       font-family="monospace">
     2. Dororo
 </text>
-<text x="40" y="261"
+<text x="40" y="281"
       fill="white"
       font-size="18"
       font-family="monospace">
     3. Love, Chunibyo &amp; Other Delusions
 </text>
-<text x="40" y="309"
+<text x="40" y="329"
       fill="white"
       font-size="18"
       font-family="monospace">
     4. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV
 </text>
-<text x="40" y="357"
+<text x="40" y="377"
       fill="white"
       font-size="18"
       font-family="monospace">
     5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part 2
 </text>
-<text x="40" y="405"
+<text x="40" y="425"
       fill="white"
       font-size="18"
       font-family="monospace">
     6. Is It Wrong To Try To Pick Up Girls in a Dungeon? V
 </text>
-<text x="40" y="453"
+<text x="40" y="473"
       fill="white"
       font-size="18"
       font-family="monospace">
     7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
 </text>
 <line x1="40"
-      y1="511"
+      y1="531"
       x2="860"
-      y2="511"
+      y2="531"
       stroke="#DA4127"
-      stroke-width="2"/>
+      stroke-width="1"/>
 
 <text x="40"
-      y="546"
+      y="566"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
