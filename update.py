@@ -278,7 +278,7 @@ anime_text += f"""
       x2="860"
       y2="{footer_y}"
       stroke="#DA4127"
-      stroke-width="1"/>
+      stroke-width="2"/>
 
 <text x="40"
       y="{footer_y + 35}"
@@ -323,7 +323,7 @@ MONTHLY RECAP
       x2="860"
       y2="130"
       stroke="#DA4127"
-      stroke-width="1"/>
+      stroke-width="2"/>
 
 {anime_text}
 
