@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="528">
+     height="561">
 
 <text x="450"
       y="70"
@@ -21,51 +21,69 @@ MONTHLY RECAP
 July 2026
 </text>
 
+<text x="450"
+      y="135"
+      text-anchor="middle"
+      fill="#DA4127"
+      font-size="18"
+      font-family="monospace">
+    ──────── ❖ ────────
+</text>
 
-<text x="40" y="122"
+
+<text x="40" y="155"
       fill="white"
       font-size="18"
       font-family="monospace">
     1. The Ramparts of Ice
 </text>
-<text x="40" y="170"
+<text x="40" y="203"
       fill="white"
       font-size="18"
       font-family="monospace">
     2. Dororo
 </text>
-<text x="40" y="218"
+<text x="40" y="251"
       fill="white"
       font-size="18"
       font-family="monospace">
     3. Love, Chunibyo &amp; Other Delusions
 </text>
-<text x="40" y="266"
+<text x="40" y="299"
       fill="white"
       font-size="18"
       font-family="monospace">
     4. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV
 </text>
-<text x="40" y="314"
+<text x="40" y="347"
       fill="white"
       font-size="18"
       font-family="monospace">
     5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part 2
 </text>
-<text x="40" y="362"
+<text x="40" y="395"
       fill="white"
       font-size="18"
       font-family="monospace">
     6. Is It Wrong To Try To Pick Up Girls in a Dungeon? V
 </text>
-<text x="40" y="410"
+<text x="40" y="443"
       fill="white"
       font-size="18"
       font-family="monospace">
     7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
 </text>
+<text x="450"
+      y="501"
+      text-anchor="middle"
+      fill="#DA4127"
+      font-size="18"
+      font-family="monospace">
+    ──────── ❖ ────────
+</text>
+
 <text x="40"
-      y="503"
+      y="536"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
