@@ -3,16 +3,6 @@
      height="576">
 
 <text x="450"
-      y="70"
-      text-anchor="middle"
-      fill="#e13333"
-      font-size="28"
-      font-family="monospace"
-      font-weight="bold">
-MONTHLY RECAP
-</text>
-
-<text x="450"
       y="105"
       text-anchor="middle"
       fill="#b0b0b0"
@@ -25,7 +15,7 @@ July 2026
       y1="130"
       x2="860"
       y2="130"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 
@@ -75,7 +65,7 @@ July 2026
       y1="516"
       x2="860"
       y2="516"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 <text x="40"
