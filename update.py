@@ -300,16 +300,6 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
      height="{svg_height}">
 
 <text x="450"
-      y="70"
-      text-anchor="middle"
-      fill="#DA4127"
-      font-size="28"
-      font-family="monospace"
-      font-weight="bold">
-MONTHLY RECAP
-</text>
-
-<text x="450"
       y="105"
       text-anchor="middle"
       fill="#b0b0b0"
