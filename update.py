@@ -272,6 +272,7 @@ for number, anime in enumerate(completed_last_month, start=1):
 
 footer_y = 122 + line_count * 24 + 10
 
+anime_text += f"""
 <text x="40"
       y="{footer_y + 35}"
       fill="#b0b0b0"
