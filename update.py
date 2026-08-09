@@ -272,14 +272,6 @@ for number, anime in enumerate(completed_last_month, start=1):
 
 footer_y = 185 + line_count * 24 + 10
 
-anime_text += f"""
-<line x1="40"
-      y1="{footer_y}"
-      x2="860"
-      y2="{footer_y}"
-      stroke="#DA4127"
-      stroke-width="1"/>
-
 <text x="40"
       y="{footer_y + 35}"
       fill="#b0b0b0"
@@ -317,13 +309,6 @@ MONTHLY RECAP
       font-family="monospace">
 {month_name} {target_year}
 </text>
-
-<line x1="40"
-      y1="130"
-      x2="860"
-      y2="130"
-      stroke="#DA4127"
-      stroke-width="1"/>
 
 {anime_text}
 
