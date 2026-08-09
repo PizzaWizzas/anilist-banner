@@ -166,7 +166,7 @@ watching_params = {
     "size": "15",
     "duration": "2300",
     "pause": "700",
-    "color": "e13333",
+    "color": "DA4127",
     "center": "true",
     "vCenter": "true",
     "width": "600",
@@ -215,7 +215,7 @@ params = {
     "size": "15",
     "duration": "2300",
     "pause": "700",
-    "color": "e13333",
+    "color": "DA4127",
     "center": "true",
     "vCenter": "true",
     "width": "380",
@@ -254,7 +254,7 @@ for number, anime in enumerate(completed_last_month, start=1):
         prefix = f"{number}. " if i == 0 else ""
 
         anime_text += f"""
-<text x="{x}" y="{170 + line_count * 24}"
+<text x="{x}" y="{122 + line_count * 24}"
       fill="white"
       font-size="18"
       font-family="monospace">
@@ -270,14 +270,14 @@ for number, anime in enumerate(completed_last_month, start=1):
 # Footer
 # ------------------------
 
-footer_y = 170 + line_count * 24 + 10
+footer_y = 122 + line_count * 24 + 10
 
 anime_text += f"""
 <line x1="40"
       y1="{footer_y}"
       x2="860"
       y2="{footer_y}"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 <text x="40"
@@ -302,7 +302,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 <text x="450"
       y="70"
       text-anchor="middle"
-      fill="#e13333"
+      fill="#DA4127"
       font-size="28"
       font-family="monospace"
       font-weight="bold">
@@ -322,7 +322,7 @@ MONTHLY RECAP
       y1="130"
       x2="860"
       y2="130"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 {anime_text}
