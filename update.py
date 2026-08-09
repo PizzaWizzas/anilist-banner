@@ -240,11 +240,55 @@ with open("banner.svg", "wb") as f:
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
 # ------------------------
-# Build Monthly Recap Text
+# Build Separate Monthly SVGs
 # ------------------------
+
+month_name = datetime(target_year, target_month, 1).strftime("%B")
+
+# ------------------------
+# Monthly Header SVG
+# ------------------------
+# Contains ONLY "MONTHLY RECAP" and the month/year.
+# This lets you manually place your own separator underneath it.
+
+header_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="120">
+
+<text x="450"
+      y="70"
+      text-anchor="middle"
+      fill="#DA4127"
+      font-size="28"
+      font-family="monospace"
+      font-weight="bold">
+    MONTHLY RECAP
+</text>
+
+<text x="450"
+      y="105"
+      text-anchor="middle"
+      fill="#b0b0b0"
+      font-size="18"
+      font-family="monospace">
+    {month_name} {target_year}
+</text>
+
+</svg>"""
+
+with open("monthly_header.svg", "w", encoding="utf-8") as f:
+    f.write(header_svg)
+
+
+# ------------------------
+# Monthly List SVG
+# ------------------------
+# Contains ONLY the completed anime list and total.
+# No top divider or other separator is included.
 
 anime_text = ""
 line_count = 0
+list_start_y = 35
 
 for number, anime in enumerate(completed_last_month, start=1):
     wrapped = textwrap.wrap(anime, width=70)
@@ -254,7 +298,7 @@ for number, anime in enumerate(completed_last_month, start=1):
         prefix = f"{number}. " if i == 0 else ""
 
         anime_text += f"""
-<text x="{x}" y="{155 + line_count * 24}"
+<text x="{x}" y="{list_start_y + line_count * 24}"
       fill="white"
       font-size="18"
       font-family="monospace">
@@ -266,74 +310,26 @@ for number, anime in enumerate(completed_last_month, start=1):
     # Extra spacing between anime
     line_count += 1
 
-# ------------------------
-# Footer
-# ------------------------
+list_footer_y = list_start_y + line_count * 24 + 10
+list_svg_height = list_footer_y + 60
 
-footer_y = 155 + line_count * 24 + 10
+list_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="{list_svg_height}">
 
-anime_text += f"""
-<text x="450"
-      y="{footer_y}"
-      text-anchor="middle"
-      fill="#DA4127"
-      font-size="18"
-      font-family="monospace">
-    ──────── ❖ ────────
-</text>
+{anime_text}
 
 <text x="40"
-      y="{footer_y + 35}"
+      y="{list_footer_y + 35}"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
     Total Completed: {len(completed_last_month)}
 </text>
-"""
-
-# ------------------------
-# SVG Size
-# ------------------------
-
-svg_height = footer_y + 60
-
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
-     width="900"
-     height="{svg_height}">
-
-<text x="450"
-      y="70"
-      text-anchor="middle"
-      fill="#DA4127"
-      font-size="28"
-      font-family="monospace"
-      font-weight="bold">
-MONTHLY RECAP
-</text>
-
-<text x="450"
-      y="105"
-      text-anchor="middle"
-      fill="#b0b0b0"
-      font-size="18"
-      font-family="monospace">
-{month_name} {target_year}
-</text>
-
-<text x="450"
-      y="135"
-      text-anchor="middle"
-      fill="#DA4127"
-      font-size="18"
-      font-family="monospace">
-    ──────── ❖ ────────
-</text>
-
-{anime_text}
 
 </svg>"""
 
-with open("monthly.svg", "w", encoding="utf-8") as f:
-    f.write(svg)
+with open("monthly_list.svg", "w", encoding="utf-8") as f:
+    f.write(list_svg)
 
-print("Generated banner.svg, watching.svg, and monthly.svg")
+print("Generated banner.svg, watching.svg, monthly_header.svg, and monthly_list.svg")
