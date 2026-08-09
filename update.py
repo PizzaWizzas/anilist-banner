@@ -277,7 +277,7 @@ anime_text += f"""
       y1="{footer_y}"
       x2="860"
       y2="{footer_y}"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 <text x="40"
@@ -302,7 +302,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 <text x="450"
       y="70"
       text-anchor="middle"
-      fill="#e13333"
+      fill="#DA4127"
       font-size="28"
       font-family="monospace"
       font-weight="bold">
@@ -322,7 +322,7 @@ MONTHLY RECAP
       y1="130"
       x2="860"
       y2="130"
-      stroke="#e13333"
+      stroke="#DA4127"
       stroke-width="1"/>
 
 {anime_text}
