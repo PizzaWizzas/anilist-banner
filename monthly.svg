@@ -7,7 +7,7 @@
       text-anchor="middle"
       fill="#e13333"
       font-size="28"
-      font-family="monospace"
+      font-family="Arial"
       font-weight="bold">
 MONTHLY RECAP
 </text>
@@ -17,7 +17,7 @@ MONTHLY RECAP
       text-anchor="middle"
       fill="#b0b0b0"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
 July 2026
 </text>
 
@@ -32,43 +32,43 @@ July 2026
 <text x="40" y="170"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     1. The Ramparts of Ice
 </text>
 <text x="40" y="218"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     2. Dororo
 </text>
 <text x="40" y="266"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     3. Love, Chunibyo &amp; Other Delusions
 </text>
 <text x="40" y="314"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     4. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV
 </text>
 <text x="40" y="362"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part 2
 </text>
 <text x="40" y="410"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     6. Is It Wrong To Try To Pick Up Girls in a Dungeon? V
 </text>
 <text x="40" y="458"
       fill="white"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
 </text>
 <line x1="40"
@@ -82,7 +82,7 @@ July 2026
       y="551"
       fill="#b0b0b0"
       font-size="18"
-      font-family="monospace">
+      font-family="Arial">
     Total Completed: 7
 </text>
 
