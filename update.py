@@ -277,7 +277,7 @@ anime_text += f"""
       y1="{footer_y}"
       x2="860"
       y2="{footer_y}"
-      stroke="#DA4127"
+      stroke="#ff3333"
       stroke-width="2"/>
 
 <text x="40"
@@ -312,7 +312,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
       y1="130"
       x2="860"
       y2="130"
-      stroke="#DA4127"
+      stroke="#ff3333"
       stroke-width="2"/>
 
 {anime_text}
