@@ -228,6 +228,11 @@ font_size = 15
 char_width = font_size * 0.602
 text_width = len(banner_text) * char_width
 
+# Only leave a small gap between the end and the next copy.
+# The repeated copy begins immediately after the text plus this spacing.
+repeat_gap = 15
+repeat_width = text_width + repeat_gap
+
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{banner_width}"
     height="{banner_height}"
@@ -247,13 +252,13 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 
     <text y="{banner_height / 2}">
       <tspan x="0">{banner_text}</tspan>
-      <tspan x="{text_width}">{banner_text}</tspan>
+      <tspan x="{repeat_width}">{banner_text}</tspan>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-{text_width} 0"
+        to="-{repeat_width} 0"
         dur="18s"
         repeatCount="indefinite"/>
     </text>
