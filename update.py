@@ -223,12 +223,10 @@ banner_width = 600
 banner_height = 40
 font_size = 15
 
-# JetBrains Mono is a monospace font, so the text is built from
-# equally sized characters. The SVG uses the same text string twice
-# and moves the group by the measured character width.
-# There is no intentional gap between repetitions.
-char_width = font_size * 0.602
-repeat_width = len(banner_text) * char_width
+# Give the text an exact SVG width. Because both copies are forced
+# to the same width, the second copy starts exactly where the first ends.
+# There is no gap between repetitions.
+repeat_width = len(banner_text) * font_size * 0.602
 
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{banner_width}"
@@ -247,9 +245,16 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
      font-size="{font_size}px"
      dominant-baseline="middle">
 
-    <text y="{banner_height / 2}">
-      <tspan x="0">{banner_text}</tspan>
-      <tspan x="{repeat_width}">{banner_text}</tspan>
+    <g>
+      <text x="0"
+            y="{banner_height / 2}"
+            textLength="{repeat_width}"
+            lengthAdjust="spacingAndGlyphs">{banner_text}</text>
+
+      <text x="{repeat_width}"
+            y="{banner_height / 2}"
+            textLength="{repeat_width}"
+            lengthAdjust="spacingAndGlyphs">{banner_text}</text>
 
       <animateTransform
         attributeName="transform"
@@ -258,7 +263,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
         to="-{repeat_width} 0"
         dur="18s"
         repeatCount="indefinite"/>
-    </text>
+    </g>
 
   </g>
 </svg>"""
