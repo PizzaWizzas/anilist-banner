@@ -171,10 +171,10 @@ watching_font_size = 15
 watching_color = "#e13333"
 
 # Timing:
-# 3 seconds to type, 0.7 second pause, 3 seconds to erase.
-watching_appear = 3.0
-watching_pause = 0.7
-watching_disappear = 3.0
+# 2 seconds to type, 1 second pause, 2 seconds to erase.
+watching_appear = 2.0
+watching_pause = 1.0
+watching_disappear = 2.0
 watching_line_duration = (
     watching_appear + watching_pause + watching_disappear
 )
