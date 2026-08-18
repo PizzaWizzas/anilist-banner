@@ -215,7 +215,7 @@ banner_text = (
     f"{days} Days Watched"
     "   •   "
     f"Mean Score ★ {mean}"
-    "   •   "
+    "   •     "
 )
 
 # Keep the banner visually consistent with watching.svg.
