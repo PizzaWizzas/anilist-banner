@@ -223,15 +223,12 @@ banner_width = 600
 banner_height = 40
 font_size = 15
 
-# JetBrains Mono is monospace, so we can estimate the text width
-# and place an identical copy directly after the first one.
+# JetBrains Mono is a monospace font, so the text is built from
+# equally sized characters. The SVG uses the same text string twice
+# and moves the group by the measured character width.
+# There is no intentional gap between repetitions.
 char_width = font_size * 0.602
-text_width = len(banner_text) * char_width
-
-# Only leave a small gap between the end and the next copy.
-# The repeated copy begins immediately after the text plus this spacing.
-repeat_gap = 15
-repeat_width = text_width + repeat_gap
+repeat_width = len(banner_text) * char_width
 
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{banner_width}"
