@@ -226,7 +226,7 @@ font_size = 15
 # Give the text an exact SVG width. Because both copies are forced
 # to the same width, the second copy starts exactly where the first ends.
 # There is no gap between repetitions.
-repeat_width = len(banner_text) * font_size * 0.602
+repeat_width = len(banner_text) * font_size * 0.602 + 8
 
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{banner_width}"
