@@ -171,10 +171,10 @@ watching_font_size = 15
 watching_color = "#e13333"
 
 # Timing:
-# 4 seconds to appear, 0.7 second pause, 4 seconds to disappear.
-watching_appear = 4.0
+# 3 seconds to appear, 0.7 second pause, 3 seconds to disappear.
+watching_appear = 3.0
 watching_pause = 0.7
-watching_disappear = 4.0
+watching_disappear = 3.0
 watching_line_duration = (
     watching_appear + watching_pause + watching_disappear
 )
@@ -201,11 +201,16 @@ for line_number, line in enumerate(watching_lines):
             char_number / max(len(line), 1)
         ) * watching_appear
 
+        # Disappear from RIGHT to LEFT, reversing the appearance direction.
+        # The rightmost character disappears first, and the leftmost
+        # character disappears last.
+        reverse_char_number = len(line) - 1 - char_number
+
         disappear_offset = (
             start_time
             + watching_appear
             + watching_pause
-            + (char_number / max(len(line), 1)) * watching_disappear
+            + (reverse_char_number / max(len(line), 1)) * watching_disappear
         )
 
         # Repeat the same animation every complete cycle.
