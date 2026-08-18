@@ -154,7 +154,7 @@ for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
 )
             completed_last_month.append(title)
 
-watching_lines = ["Currently Watching", ""]
+watching_lines = ["Currently Watching"]
 
 for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
     for entry in anime_list["entries"]:
