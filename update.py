@@ -171,7 +171,7 @@ watching_font_size = 15
 watching_color = "#e13333"
 
 # Timing:
-# 3 seconds to appear, 0.7 second pause, 3 seconds to disappear.
+# 3 seconds to type, 0.7 second pause, 3 seconds to erase.
 watching_appear = 3.0
 watching_pause = 0.7
 watching_disappear = 3.0
@@ -181,13 +181,12 @@ watching_line_duration = (
 
 watching_total_duration = len(watching_lines) * watching_line_duration
 
+# Build a true letter-by-letter typing/deleting animation.
 watching_svg_parts = []
 
 for line_number, line in enumerate(watching_lines):
     start_time = line_number * watching_line_duration
 
-    # JetBrains Mono is monospace, so use the same font and size
-    # as banner.svg and center the line in the 600px SVG.
     char_width = watching_font_size * 0.602
     line_width = max(len(line) * char_width, 1)
     start_x = (watching_width - line_width) / 2
@@ -197,23 +196,22 @@ for line_number, line in enumerate(watching_lines):
     for char_number, char in enumerate(line):
         x = start_x + char_number * char_width
 
-        appear_offset = start_time + (
-            char_number / max(len(line), 1)
-        ) * watching_appear
+        # Appear one character at a time from LEFT to RIGHT.
+        appear_offset = (
+            start_time
+            + (char_number / max(len(line), 1)) * watching_appear
+        )
 
-        # Disappear from RIGHT to LEFT, reversing the appearance direction.
-        # The rightmost character disappears first, and the leftmost
-        # character disappears last.
+        # Disappear one character at a time from RIGHT to LEFT.
         reverse_char_number = len(line) - 1 - char_number
-
         disappear_offset = (
             start_time
             + watching_appear
             + watching_pause
-            + (reverse_char_number / max(len(line), 1)) * watching_disappear
+            + (reverse_char_number / max(len(line), 1))
+            * watching_disappear
         )
 
-        # Repeat the same animation every complete cycle.
         appear_times = ";".join(
             f"{appear_offset + cycle * watching_total_duration:.3f}s"
             for cycle in range(100)
@@ -224,41 +222,34 @@ for line_number, line in enumerate(watching_lines):
             for cycle in range(100)
         )
 
-        char_elements.append(
-            f'''<text x="{x:.2f}"
-      y="25"
-      fill="{watching_color}"
-      font-size="{watching_font_size}px"
-      font-family="JetBrains Mono, monospace"
-      xml:space="preserve"
-      opacity="0">{html.escape(char) or " "}
-  <animate attributeName="opacity"
-           values="0;1"
-           dur="0.08s"
-           begin="{appear_times}"
-           fill="freeze"/>
-  <animate attributeName="opacity"
-           values="1;0"
-           dur="0.08s"
-           begin="{disappear_times}"
-           fill="freeze"/>
-</text>'''
+        escaped_char = html.escape(char) or " "
+
+        char_svg = (
+            f'<text x="{x:.2f}" y="25" fill="{watching_color}" '
+            f'font-size="{watching_font_size}px" '
+            f'font-family="JetBrains Mono, monospace" '
+            f'xml:space="preserve" opacity="0">'
+            f'{escaped_char}'
+            f'<animate attributeName="opacity" values="0;1" '
+            f'dur="0.01s" begin="{appear_times}" fill="freeze"/>'
+            f'<animate attributeName="opacity" values="1;0" '
+            f'dur="0.01s" begin="{disappear_times}" fill="freeze"/>'
+            f'</text>'
         )
 
+        char_elements.append(char_svg)
+
     watching_svg_parts.append(
-        f'''<g>
-{chr(10).join(char_elements)}
-</g>'''
+        "<g>\n" + "\n".join(char_elements) + "\n</g>"
     )
 
-watching_svg = f'''<svg xmlns="http://www.w3.org/2000/svg"
-    width="{watching_width}"
-    height="{watching_height}"
-    viewBox="0 0 {watching_width} {watching_height}">
-
-  {chr(10).join(watching_svg_parts)}
-
-</svg>'''
+watching_svg = (
+    f'<svg xmlns="http://www.w3.org/2000/svg" '
+    f'width="{watching_width}" height="{watching_height}" '
+    f'viewBox="0 0 {watching_width} {watching_height}">\n'
+    f'{chr(10).join(watching_svg_parts)}\n'
+    f'</svg>'
+)
 
 with open("watching.svg", "w", encoding="utf-8") as f:
     f.write(watching_svg)
