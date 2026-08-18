@@ -165,7 +165,7 @@ for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
 # Build Currently Watching SVG
 # ------------------------
 
-watching_width = 600
+watching_width = 380
 watching_height = 40
 watching_font_size = 15
 watching_color = "#e13333"
