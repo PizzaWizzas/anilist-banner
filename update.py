@@ -203,73 +203,39 @@ for s in anime["statuses"]:
     if s["status"] == "PLANNING":
         planned = s["count"]
 
-# ------------------------
-# Build continuously scrolling Banner SVG
-# ------------------------
-
-banner_text = (
-    f"{completed} Anime Completed"
-    "   •   "
-    f"{episodes} Episodes Watched"
-    "   •   "
-    f"{days} Days Watched"
-    "   •   "
+lines = [
+    f"{completed} Anime Completed",
+    f"{episodes} Episodes Watched",
+    f"{days} Days Watched",
     f"Mean Score ★ {mean}"
-    "   •     "
+]
+
+params = {
+    "font": "JetBrains Mono",
+    "size": "15",
+    "duration": "2300",
+    "pause": "700",
+    "color": "e13333",
+    "center": "true",
+    "vCenter": "true",
+    "width": "380",
+    "lines": ";".join(lines)
+}
+
+url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
+
+request = urllib.request.Request(
+    url,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    }
 )
 
-# Keep the banner visually consistent with watching.svg.
-banner_width = 600
-banner_height = 40
-font_size = 15
+with urllib.request.urlopen(request) as response:
+    svg = response.read()
 
-# Give the text an exact SVG width. Because both copies are forced
-# to the same width, the second copy starts exactly where the first ends.
-# There is no gap between repetitions.
-repeat_width = len(banner_text) * font_size * 0.602 + 8
-
-banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
-    width="{banner_width}"
-    height="{banner_height}"
-    viewBox="0 0 {banner_width} {banner_height}">
-
-  <defs>
-    <clipPath id="bannerClip">
-      <rect width="{banner_width}" height="{banner_height}"/>
-    </clipPath>
-  </defs>
-
-  <g clip-path="url(#bannerClip)"
-     fill="#e13333"
-     font-family="JetBrains Mono, monospace"
-     font-size="{font_size}px"
-     dominant-baseline="middle">
-
-    <g>
-      <text x="0"
-            y="{banner_height / 2}"
-            textLength="{repeat_width}"
-            lengthAdjust="spacingAndGlyphs">{banner_text}</text>
-
-      <text x="{repeat_width}"
-            y="{banner_height / 2}"
-            textLength="{repeat_width}"
-            lengthAdjust="spacingAndGlyphs">{banner_text}</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="-{repeat_width} 0"
-        dur="18s"
-        repeatCount="indefinite"/>
-    </g>
-
-  </g>
-</svg>"""
-
-with open("banner.svg", "w", encoding="utf-8") as f:
-    f.write(banner_svg)
+with open("banner.svg", "wb") as f:
+    f.write(svg)
 
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
