@@ -164,7 +164,7 @@ for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
 watching_params = {
     "font": "JetBrains Mono",
     "size": "15",
-    "duration": "2300",
+    "duration": "5000",
     "pause": "700",
     "color": "e13333",
     "center": "true",
