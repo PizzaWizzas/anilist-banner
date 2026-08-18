@@ -261,7 +261,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
         type="translate"
         from="0 0"
         to="-{text_width} 0"
-        dur="18s"
+        dur="12s"
         repeatCount="indefinite"/>
     </g>
   </g>
