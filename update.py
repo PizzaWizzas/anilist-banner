@@ -173,7 +173,8 @@ watching_color = "#e13333"
 # Timing:
 # Each character takes the same amount of time to appear/disappear,
 # regardless of how long the title is.
-watching_char_time = 0.07
+watching_appear_char_time = 0.07
+watching_disappear_char_time = 0.05
 watching_pause = 0.7
 
 # Build a true letter-by-letter typing/deleting animation.
@@ -186,8 +187,8 @@ for line in watching_lines:
     watching_line_starts.append(start_time)
 
     # The total time for this title depends on its character count.
-    watching_appear = len(line) * watching_char_time
-    watching_disappear = len(line) * watching_char_time
+    watching_appear = len(line) * watching_appear_char_time
+    watching_disappear = len(line) * watching_disappear_char_time
     watching_line_duration = (
         watching_appear + watching_pause + watching_disappear
     )
@@ -199,8 +200,8 @@ watching_total_duration = start_time
 for line_number, line in enumerate(watching_lines):
     start_time = watching_line_starts[line_number]
 
-    watching_appear = len(line) * watching_char_time
-    watching_disappear = len(line) * watching_char_time
+    watching_appear = len(line) * watching_appear_char_time
+    watching_disappear = len(line) * watching_disappear_char_time
 
     char_width = watching_font_size * 0.602
     line_width = max(len(line) * char_width, 1)
