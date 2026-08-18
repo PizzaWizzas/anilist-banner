@@ -154,88 +154,62 @@ for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
 )
             completed_last_month.append(title)
 
-watching_lines = ["Currently Watching", ""]
+watching_# ------------------------
+# Build continuously scrolling Banner SVG
+# ------------------------
 
-for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
-    for entry in anime_list["entries"]:
-        if entry["media"]["status"] == "RELEASING":
-            watching_lines.append(entry["media"]["title"]["english"])
-
-watching_params = {
-    "font": "JetBrains Mono",
-    "size": "15",
-    "duration": "2300",
-    "pause": "700",
-    "color": "e13333",
-    "center": "true",
-    "vCenter": "true",
-    "width": "600",
-    "lines": ";".join(watching_lines)
-}
-
-watching_url = (
-    "https://readme-typing-svg.demolab.com/?"
-    + urllib.parse.urlencode(watching_params)
-)
-
-watching_req = urllib.request.Request(
-    watching_url,
-    headers={
-        "User-Agent": "Mozilla/5.0"
-    }
-)
-
-with urllib.request.urlopen(watching_req) as r:
-    watching_svg = r.read()
-
-with open("watching.svg", "wb") as f:
-    f.write(watching_svg)
-
-anime = result["data"]["User"]["statistics"]["anime"]
-
-completed = anime["count"]
-episodes = anime["episodesWatched"]
-days = round(anime["minutesWatched"] / 60 / 24, 1)
-mean = anime["meanScore"]
-
-planned = 0
-for s in anime["statuses"]:
-    if s["status"] == "PLANNING":
-        planned = s["count"]
-
-lines = [
-    f"{completed} Anime Completed",
-    f"{episodes} Episodes Watched",
-    f"{days} Days Watched",
+banner_text = (
+    f"{completed} Anime Completed"
+    "   •   "
+    f"{episodes} Episodes Watched"
+    "   •   "
+    f"{days} Days Watched"
+    "   •   "
     f"Mean Score ★ {mean}"
-]
-
-params = {
-    "font": "JetBrains Mono",
-    "size": "15",
-    "duration": "2300",
-    "pause": "700",
-    "color": "e13333",
-    "center": "true",
-    "vCenter": "true",
-    "width": "380",
-    "lines": ";".join(lines)
-}
-
-url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
-
-request = urllib.request.Request(
-    url,
-    headers={
-        "User-Agent": "Mozilla/5.0"
-    }
+    "   •   "
 )
 
-with urllib.request.urlopen(request) as response:
-    svg = response.read()
+# Keep the banner visually consistent with watching.svg.
+banner_width = 600
+banner_height = 40
+font_size = 15
 
-with open("banner.svg", "wb") as f:
-    f.write(svg)
+# The text is duplicated so the second copy follows the first seamlessly.
+banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+    width="{banner_width}"
+    height="{banner_height}"
+    viewBox="0 0 {banner_width} {banner_height}">
+
+  <defs>
+    <clipPath id="bannerClip">
+      <rect width="{banner_width}" height="{banner_height}"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#bannerClip)"
+     fill="#e13333"
+     font-family="JetBrains Mono, monospace"
+     font-size="{font_size}px"
+     dominant-baseline="middle">
+
+    <text y="{banner_height / 2}">
+      <tspan x="0">{banner_text}</tspan>
+      <tspan x="{banner_width}">{banner_text}</tspan>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="-{banner_width} 0"
+        dur="12s"
+        repeatCount="indefinite"/>
+    </text>
+
+  </g>
+</svg>"""
+
+with open("banner.svg", "w", encoding="utf-8") as f:
+    f.write(banner_svg)
 
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
