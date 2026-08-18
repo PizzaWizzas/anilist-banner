@@ -154,7 +154,56 @@ for anime_list in monthly_result["data"]["MediaListCollection"]["lists"]:
 )
             completed_last_month.append(title)
 
-watching_# ------------------------
+watching_lines = ["Currently Watching", ""]
+
+for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
+    for entry in anime_list["entries"]:
+        if entry["media"]["status"] == "RELEASING":
+            watching_lines.append(entry["media"]["title"]["english"])
+
+watching_params = {
+    "font": "JetBrains Mono",
+    "size": "15",
+    "duration": "2300",
+    "pause": "700",
+    "color": "e13333",
+    "center": "true",
+    "vCenter": "true",
+    "width": "600",
+    "lines": ";".join(watching_lines)
+}
+
+watching_url = (
+    "https://readme-typing-svg.demolab.com/?"
+    + urllib.parse.urlencode(watching_params)
+)
+
+watching_req = urllib.request.Request(
+    watching_url,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    }
+)
+
+with urllib.request.urlopen(watching_req) as r:
+    watching_svg = r.read()
+
+with open("watching.svg", "wb") as f:
+    f.write(watching_svg)
+
+anime = result["data"]["User"]["statistics"]["anime"]
+
+completed = anime["count"]
+episodes = anime["episodesWatched"]
+days = round(anime["minutesWatched"] / 60 / 24, 1)
+mean = anime["meanScore"]
+
+planned = 0
+for s in anime["statuses"]:
+    if s["status"] == "PLANNING":
+        planned = s["count"]
+
+# ------------------------
 # Build continuously scrolling Banner SVG
 # ------------------------
 
@@ -174,7 +223,11 @@ banner_width = 600
 banner_height = 40
 font_size = 15
 
-# The text is duplicated so the second copy follows the first seamlessly.
+# JetBrains Mono is monospace, so we can estimate the text width
+# and place an identical copy directly after the first one.
+char_width = font_size * 0.602
+text_width = len(banner_text) * char_width
+
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{banner_width}"
     height="{banner_height}"
@@ -194,14 +247,14 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 
     <text y="{banner_height / 2}">
       <tspan x="0">{banner_text}</tspan>
-      <tspan x="{banner_width}">{banner_text}</tspan>
+      <tspan x="{text_width}">{banner_text}</tspan>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-{banner_width} 0"
-        dur="12s"
+        to="-{text_width} 0"
+        dur="18s"
         repeatCount="indefinite"/>
     </text>
 
