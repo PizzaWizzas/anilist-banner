@@ -293,23 +293,22 @@ lines = [
 # Build Continuous Scrolling Banner
 # ------------------------
 
+# Keep the existing • separators between stats, and add one more
+# identical separator at the end of each repeated unit. This means
+# the loop boundary is:  •  -> next text, with no empty gap.
 banner_text = "  •  ".join(lines)
+banner_unit = banner_text + "  •  "
+
 font_size = 15
 svg_width = 380
 svg_height = 40
 
-# Use the same • separator at the exact boundary between
-# the end of one copy and the beginning of the next.
-separator = "  •  "
-separator_width = len(separator) * 9
+# JetBrains Mono is monospace, so use the same width estimate as before.
+char_width = 9
+unit_width = max(len(banner_unit) * char_width, svg_width)
 
-# Estimate text width using the same monospace spacing as before.
-text_width = max(len(banner_text) * 9, svg_width)
-
-# The second copy starts immediately after the first copy's text.
-# The boundary separator is included so there is no empty gap in the loop.
-loop_width = text_width
-
+# Put two identical units directly next to each other.
+# The second unit starts exactly where the first unit ends.
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{svg_width}"
     height="{svg_height}"
@@ -322,42 +321,27 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
   </defs>
 
   <g clip-path="url(#bannerClip)">
-    <g>
-      <text x="0"
-            y="25"
-            fill="#e13333"
-            font-size="{font_size}px"
-            font-family="JetBrains Mono, monospace"
-            xml:space="preserve">
-        {banner_text}
-      </text>
+    <text x="0"
+          y="25"
+          fill="#e13333"
+          font-size="{font_size}px"
+          font-family="JetBrains Mono, monospace"
+          xml:space="preserve">{banner_unit}</text>
 
-      <text x="{text_width - separator_width / 2:.2f}"
-            y="25"
-            fill="#e13333"
-            font-size="{font_size}px"
-            font-family="JetBrains Mono, monospace"
-            xml:space="preserve">
-        •
-      </text>
+    <text x="{unit_width}"
+          y="25"
+          fill="#e13333"
+          font-size="{font_size}px"
+          font-family="JetBrains Mono, monospace"
+          xml:space="preserve">{banner_unit}</text>
 
-      <text x="{text_width + separator_width:.2f}"
-            y="25"
-            fill="#e13333"
-            font-size="{font_size}px"
-            font-family="JetBrains Mono, monospace"
-            xml:space="preserve">
-        {banner_text}
-      </text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="-{loop_width + separator_width:.2f} 0"
-        dur="12s"
-        repeatCount="indefinite"/>
-    </g>
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0"
+      to="-{unit_width} 0"
+      dur="12s"
+      repeatCount="indefinite"/>
   </g>
 </svg>"""
 
