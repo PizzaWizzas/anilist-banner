@@ -20,7 +20,16 @@
         161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25
       </text>
 
-      <text x="810"
+      <text x="787.50"
+            y="25"
+            fill="#e13333"
+            font-size="15px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        •
+      </text>
+
+      <text x="855.00"
             y="25"
             fill="#e13333"
             font-size="15px"
@@ -33,7 +42,7 @@
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-810 0"
+        to="-855.00 0"
         dur="12s"
         repeatCount="indefinite"/>
     </g>
