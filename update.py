@@ -243,7 +243,7 @@ for line_number, line in enumerate(watching_lines):
         char_svg = (
             f'<text x="{x:.2f}" y="25" fill="{watching_color}" '
             f'font-size="{watching_font_size}px" '
-            f'font-family="JetBrains Mono, monospace" '
+            f'font-family="Roboto, sans-serif" '
             f'xml:space="preserve" opacity="0">'
             f'{escaped_char}'
             f'<animate attributeName="opacity" values="0;1" '
@@ -325,7 +325,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
             y="25"
             fill="#e13333"
             font-size="{font_size}px"
-            font-family="JetBrains Mono, monospace"
+            font-family="Roboto, sans-serif"
             xml:space="preserve"
             textLength="{unit_width:.2f}"
             lengthAdjust="spacing">{banner_unit}</text>
@@ -334,7 +334,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
             y="25"
             fill="#e13333"
             font-size="{font_size}px"
-            font-family="JetBrains Mono, monospace"
+            font-family="Roboto, sans-serif"
             xml:space="preserve"
             textLength="{unit_width:.2f}"
             lengthAdjust="spacing">{banner_unit}</text>
