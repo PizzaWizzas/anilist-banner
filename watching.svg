@@ -17,7 +17,7 @@
 
                 <path id='path0'>
                             <!-- Single line -->
-                                <animate id='d0' attributeName='d' begin='0s;d12.end'
+                                <animate id='d0' attributeName='d' begin='0s;d11.end'
                     dur='5700ms' fill='remove'
                     values='m0,25 h0 ; m0,25 h600 ; m0,25 h600 ; m0,25 h0' keyTimes='0;0.70175438596491;0.82456140350877;1' />
                     </path>
@@ -40,7 +40,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path1'>
-            
+            Re:ZERO -Starting Life in Another World- Season 4
         </textPath>
     </text>
         <path id='path2'>
@@ -54,7 +54,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path2'>
-            Re:ZERO -Starting Life in Another World- Season 4
+            That Time I Got Reincarnated as a Slime Season 4
         </textPath>
     </text>
         <path id='path3'>
@@ -68,7 +68,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path3'>
-            That Time I Got Reincarnated as a Slime Season 4
+            Smoking Behind the Supermarket with You
         </textPath>
     </text>
         <path id='path4'>
@@ -82,7 +82,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path4'>
-            Smoking Behind the Supermarket with You
+            Sparks of Tomorrow
         </textPath>
     </text>
         <path id='path5'>
@@ -96,7 +96,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path5'>
-            Sparks of Tomorrow
+            You and I Are Polar Opposites Season 2
         </textPath>
     </text>
         <path id='path6'>
@@ -110,7 +110,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path6'>
-            You and I Are Polar Opposites Season 2
+            Chainsmoker Cat
         </textPath>
     </text>
         <path id='path7'>
@@ -124,7 +124,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path7'>
-            Chainsmoker Cat
+            BLACK TORCH
         </textPath>
     </text>
         <path id='path8'>
@@ -138,7 +138,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path8'>
-            BLACK TORCH
+            Love Unseen Beneath the Clear Night Sky
         </textPath>
     </text>
         <path id='path9'>
@@ -152,7 +152,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path9'>
-            Love Unseen Beneath the Clear Night Sky
+            THE GHOST IN THE SHELL
         </textPath>
     </text>
         <path id='path10'>
@@ -166,7 +166,7 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path10'>
-            THE GHOST IN THE SHELL
+            KAIJU GIRL CARAMELISE
         </textPath>
     </text>
         <path id='path11'>
@@ -180,20 +180,6 @@
         x='50%' text-anchor='middle'
         letter-spacing='normal'>
         <textPath xlink:href='#path11'>
-            KAIJU GIRL CARAMELISE
-        </textPath>
-    </text>
-        <path id='path12'>
-                            <!-- Single line -->
-                                <animate id='d12' attributeName='d' begin='d11.end'
-                    dur='5700ms' fill='remove'
-                    values='m0,25 h0 ; m0,25 h600 ; m0,25 h600 ; m0,25 h0' keyTimes='0;0.70175438596491;0.82456140350877;1' />
-                    </path>
-    <text font-family='"JetBrains Mono", monospace' fill='#e13333' font-size='15'
-        dominant-baseline='middle'
-        x='50%' text-anchor='middle'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path12'>
             The Cat and the Dragon
         </textPath>
     </text>
