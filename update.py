@@ -203,14 +203,42 @@ for line_number, line in enumerate(watching_lines):
     watching_appear = len(line) * watching_appear_char_time
     watching_disappear = len(line) * watching_disappear_char_time
 
-    char_width = watching_font_size * 0.602
-    line_width = max(len(line) * char_width, 1)
+    # Character widths for Roboto at the current font size.
+    # These are based on Roboto's proportional glyph widths.
+    roboto_widths = {
+        " ": 0.278, "!": 0.268, '"': 0.353, "#": 0.557, "$": 0.556,
+        "%": 0.889, "&": 0.667, "'": 0.191, "(": 0.333, ")": 0.333,
+        "*": 0.389, "+": 0.584, ",": 0.278, "-": 0.333, ".": 0.278,
+        "/": 0.278, ":": 0.333, ";": 0.333, "<": 0.584, "=": 0.584,
+        ">": 0.584, "?": 0.556, "@": 0.975,
+        "A": 0.667, "B": 0.667, "C": 0.667, "D": 0.722, "E": 0.556,
+        "F": 0.519, "G": 0.722, "H": 0.722, "I": 0.278, "J": 0.333,
+        "K": 0.667, "L": 0.556, "M": 0.833, "N": 0.722, "O": 0.722,
+        "P": 0.556, "Q": 0.722, "R": 0.667, "S": 0.556, "T": 0.611,
+        "U": 0.722, "V": 0.667, "W": 0.944, "X": 0.667, "Y": 0.611,
+        "Z": 0.556,
+        "a": 0.556, "b": 0.556, "c": 0.500, "d": 0.556, "e": 0.556,
+        "f": 0.278, "g": 0.556, "h": 0.556, "i": 0.222, "j": 0.222,
+        "k": 0.500, "l": 0.222, "m": 0.833, "n": 0.556, "o": 0.556,
+        "p": 0.556, "q": 0.556, "r": 0.333, "s": 0.500, "t": 0.278,
+        "u": 0.556, "v": 0.500, "w": 0.722, "x": 0.500, "y": 0.500,
+        "z": 0.500,
+    }
+
+    default_char_width = watching_font_size * 0.556
+
+    character_widths = [
+        watching_font_size * roboto_widths.get(char, 0.556)
+        for char in line
+    ]
+
+    line_width = max(sum(character_widths), 1)
     start_x = (watching_width - line_width) / 2
 
     char_elements = []
 
     for char_number, char in enumerate(line):
-        x = start_x + char_number * char_width
+        x = start_x + sum(character_widths[:char_number])
 
         # Appear one character at a time from LEFT to RIGHT.
         appear_offset = (
