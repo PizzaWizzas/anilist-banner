@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="380"
+    width="450"
     height="40"
-    viewBox="0 0 380 40">
+    viewBox="0 0 450 40">
 
   <defs>
     <clipPath id="bannerClip">
-      <rect x="0" y="0" width="380" height="40"/>
+      <rect x="0" y="0" width="450" height="40"/>
     </clipPath>
   </defs>
 
