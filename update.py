@@ -210,32 +210,65 @@ lines = [
     f"Mean Score ★ {mean}"
 ]
 
-params = {
-    "font": "JetBrains Mono",
-    "size": "15",
-    "duration": "2300",
-    "pause": "700",
-    "color": "e13333",
-    "center": "true",
-    "vCenter": "true",
-    "width": "380",
-    "lines": ";".join(lines)
-}
+# ------------------------
+# Build Continuous Scrolling Banner
+# ------------------------
 
-url = "https://readme-typing-svg.demolab.com/?" + urllib.parse.urlencode(params)
+banner_text = "  •  ".join(lines)
+font_size = 15
+svg_width = 380
+svg_height = 40
 
-request = urllib.request.Request(
-    url,
-    headers={
-        "User-Agent": "Mozilla/5.0"
-    }
-)
+# Estimate text width so two copies can form a seamless loop.
+# The actual SVG uses a monospace font, so this gives a stable spacing.
+text_width = max(len(banner_text) * 9, svg_width)
 
-with urllib.request.urlopen(request) as response:
-    svg = response.read()
+# Duplicate the text. The second copy begins exactly where the first ends.
+# This makes the animation loop continuously without a visible reset.
+banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+    width="{svg_width}"
+    height="{svg_height}"
+    viewBox="0 0 {svg_width} {svg_height}">
 
-with open("banner.svg", "wb") as f:
-    f.write(svg)
+  <defs>
+    <clipPath id="bannerClip">
+      <rect x="0" y="0" width="{svg_width}" height="{svg_height}"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#bannerClip)">
+    <g>
+      <text x="0"
+            y="25"
+            fill="#e13333"
+            font-size="{font_size}px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        {banner_text}
+      </text>
+
+      <text x="{text_width}"
+            y="25"
+            fill="#e13333"
+            font-size="{font_size}px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        {banner_text}
+      </text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0 0"
+        to="-{text_width} 0"
+        dur="18s"
+        repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>"""
+
+with open("banner.svg", "w", encoding="utf-8") as f:
+    f.write(banner_svg)
 
 month_name = datetime(target_year, target_month, 1).strftime("%B")
 
