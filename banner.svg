@@ -18,19 +18,19 @@
     <g>
       <text x="0"
             y="20.0"
-            textLength="948.15"
+            textLength="956.15"
             lengthAdjust="spacingAndGlyphs">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •     </text>
 
-      <text x="948.15"
+      <text x="956.15"
             y="20.0"
-            textLength="948.15"
+            textLength="956.15"
             lengthAdjust="spacingAndGlyphs">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •     </text>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-948.15 0"
+        to="-956.15 0"
         dur="18s"
         repeatCount="indefinite"/>
     </g>
