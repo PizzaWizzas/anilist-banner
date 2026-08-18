@@ -171,21 +171,36 @@ watching_font_size = 15
 watching_color = "#e13333"
 
 # Timing:
-# 2 seconds to type, 1 second pause, 2 seconds to erase.
-watching_appear = 2.0
-watching_pause = 1.0
-watching_disappear = 2.0
-watching_line_duration = (
-    watching_appear + watching_pause + watching_disappear
-)
-
-watching_total_duration = len(watching_lines) * watching_line_duration
+# Each character takes the same amount of time to appear/disappear,
+# regardless of how long the title is.
+watching_char_time = 0.08
+watching_pause = 0.7
 
 # Build a true letter-by-letter typing/deleting animation.
 watching_svg_parts = []
 
+start_time = 0.0
+watching_line_starts = []
+
+for line in watching_lines:
+    watching_line_starts.append(start_time)
+
+    # The total time for this title depends on its character count.
+    watching_appear = len(line) * watching_char_time
+    watching_disappear = len(line) * watching_char_time
+    watching_line_duration = (
+        watching_appear + watching_pause + watching_disappear
+    )
+
+    start_time += watching_line_duration
+
+watching_total_duration = start_time
+
 for line_number, line in enumerate(watching_lines):
-    start_time = line_number * watching_line_duration
+    start_time = watching_line_starts[line_number]
+
+    watching_appear = len(line) * watching_char_time
+    watching_disappear = len(line) * watching_char_time
 
     char_width = watching_font_size * 0.602
     line_width = max(len(line) * char_width, 1)
