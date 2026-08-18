@@ -297,14 +297,18 @@ lines = [
 # This separator sits directly before the next copy begins,
 # so there is no empty space at the loop boundary.
 banner_text = "  •  ".join(lines)
-banner_unit = banner_text + "  •  "
+
+# Put the same • at the END of the repeating unit.
+# IMPORTANT: there are NO spaces after this final •.
+# That makes the next copy start immediately after the •,
+# instead of leaving a visible gap at the loop boundary.
+banner_unit = banner_text + "  •"
 
 font_size = 15
 svg_width = 380
 svg_height = 40
 
-# JetBrains Mono is monospace, so keep the same width estimate
-# used by the original working continuous banner.
+# JetBrains Mono is monospace, so each character uses the same advance.
 char_width = 9
 text_width = len(banner_unit) * char_width
 
