@@ -174,8 +174,8 @@ watching_color = "#e13333"
 # Each character takes the same amount of time to appear/disappear,
 # regardless of how long the title is.
 watching_appear_char_time = 0.06
-watching_disappear_char_time = 0.03
-watching_pause = 0.7
+watching_disappear_char_time = 0.01
+watching_pause = 1
 
 # Build a true letter-by-letter typing/deleting animation.
 watching_svg_parts = []
