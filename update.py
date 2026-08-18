@@ -293,24 +293,20 @@ lines = [
 # Build Continuous Scrolling Banner
 # ------------------------
 
-# Add the same • separator to the END of the repeating text.
-# This separator sits directly before the next copy begins,
-# so there is no empty space at the loop boundary.
+# The repeating unit ends with the SAME • separator used between stats.
+# textLength forces the rendered unit and the animation distance to be
+# exactly the same width, so the second copy touches the first with no gap.
 banner_text = "  •  ".join(lines)
-
-# Put the same • at the END of the repeating unit.
-# IMPORTANT: there are NO spaces after this final •.
-# That makes the next copy start immediately after the •,
-# instead of leaving a visible gap at the loop boundary.
-banner_unit = banner_text + "  •"
+banner_unit = banner_text + "  •  "
 
 font_size = 15
 svg_width = 380
 svg_height = 40
 
-# JetBrains Mono is monospace, so each character uses the same advance.
-char_width = 9
-text_width = len(banner_unit) * char_width
+# Width of the repeating unit in SVG pixels.
+# textLength below makes this exact, regardless of the browser's
+# actual JetBrains Mono font metrics.
+unit_width = len(banner_unit) * 8.25
 
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{svg_width}"
@@ -330,20 +326,24 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
             fill="#e13333"
             font-size="{font_size}px"
             font-family="JetBrains Mono, monospace"
-            xml:space="preserve">{banner_unit}</text>
+            xml:space="preserve"
+            textLength="{unit_width:.2f}"
+            lengthAdjust="spacing">{banner_unit}</text>
 
-      <text x="{text_width}"
+      <text x="{unit_width:.2f}"
             y="25"
             fill="#e13333"
             font-size="{font_size}px"
             font-family="JetBrains Mono, monospace"
-            xml:space="preserve">{banner_unit}</text>
+            xml:space="preserve"
+            textLength="{unit_width:.2f}"
+            lengthAdjust="spacing">{banner_unit}</text>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-{text_width} 0"
+        to="-{unit_width:.2f} 0"
         dur="12s"
         repeatCount="indefinite"/>
     </g>
