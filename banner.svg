@@ -17,13 +17,13 @@
 
     <text y="20.0">
       <tspan x="0">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •   </tspan>
-      <tspan x="930.0899999999999">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •   </tspan>
+      <tspan x="945.0899999999999">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •   </tspan>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-930.0899999999999 0"
+        to="-945.0899999999999 0"
         dur="18s"
         repeatCount="indefinite"/>
     </text>
