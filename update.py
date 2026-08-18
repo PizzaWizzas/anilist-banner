@@ -165,7 +165,7 @@ for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
 # Build Currently Watching SVG
 # ------------------------
 
-watching_width = 380
+watching_width = 450
 watching_height = 40
 watching_font_size = 14
 watching_color = "#e13333"
@@ -300,7 +300,7 @@ banner_text = "  •  ".join(lines)
 banner_unit = banner_text + "  •  "
 
 font_size = 14
-svg_width = 380
+svg_width = 450
 svg_height = 40
 
 # Width of the repeating unit in SVG pixels.
