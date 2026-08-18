@@ -298,12 +298,18 @@ font_size = 15
 svg_width = 380
 svg_height = 40
 
-# Estimate text width so two copies can form a seamless loop.
-# The actual SVG uses a monospace font, so this gives a stable spacing.
+# Use the same • separator at the exact boundary between
+# the end of one copy and the beginning of the next.
+separator = "  •  "
+separator_width = len(separator) * 9
+
+# Estimate text width using the same monospace spacing as before.
 text_width = max(len(banner_text) * 9, svg_width)
 
-# Duplicate the text. The second copy begins exactly where the first ends.
-# This makes the animation loop continuously without a visible reset.
+# The second copy starts immediately after the first copy's text.
+# The boundary separator is included so there is no empty gap in the loop.
+loop_width = text_width
+
 banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     width="{svg_width}"
     height="{svg_height}"
@@ -326,7 +332,16 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
         {banner_text}
       </text>
 
-      <text x="{text_width}"
+      <text x="{text_width - separator_width / 2:.2f}"
+            y="25"
+            fill="#e13333"
+            font-size="{font_size}px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        •
+      </text>
+
+      <text x="{text_width + separator_width:.2f}"
             y="25"
             fill="#e13333"
             font-size="{font_size}px"
@@ -339,7 +354,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-{text_width} 0"
+        to="-{loop_width + separator_width:.2f} 0"
         dur="12s"
         repeatCount="indefinite"/>
     </g>
