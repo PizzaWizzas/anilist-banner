@@ -1,39 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="600"
+    width="380"
     height="40"
-    viewBox="0 0 600 40">
+    viewBox="0 0 380 40">
 
   <defs>
     <clipPath id="bannerClip">
-      <rect width="600" height="40"/>
+      <rect x="0" y="0" width="380" height="40"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#bannerClip)"
-     fill="#e13333"
-     font-family="JetBrains Mono, monospace"
-     font-size="15px"
-     dominant-baseline="middle">
-
+  <g clip-path="url(#bannerClip)">
     <g>
       <text x="0"
-            y="20.0"
-            textLength="956.15"
-            lengthAdjust="spacingAndGlyphs">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •     </text>
+            y="25"
+            fill="#e13333"
+            font-size="15px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25
+      </text>
 
-      <text x="956.15"
-            y="20.0"
-            textLength="956.15"
-            lengthAdjust="spacingAndGlyphs">161 Anime Completed   •   1949 Episodes Watched   •   33.5 Days Watched   •   Mean Score ★ 77.25   •     </text>
+      <text x="810"
+            y="25"
+            fill="#e13333"
+            font-size="15px"
+            font-family="JetBrains Mono, monospace"
+            xml:space="preserve">
+        161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25
+      </text>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-956.15 0"
+        to="-810 0"
         dur="18s"
         repeatCount="indefinite"/>
     </g>
-
   </g>
 </svg>
