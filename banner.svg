@@ -16,20 +16,24 @@
             fill="#e13333"
             font-size="15px"
             font-family="JetBrains Mono, monospace"
-            xml:space="preserve">161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25  •</text>
+            xml:space="preserve"
+            textLength="783.75"
+            lengthAdjust="spacing">161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25  •  </text>
 
-      <text x="837"
+      <text x="783.75"
             y="25"
             fill="#e13333"
             font-size="15px"
             font-family="JetBrains Mono, monospace"
-            xml:space="preserve">161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25  •</text>
+            xml:space="preserve"
+            textLength="783.75"
+            lengthAdjust="spacing">161 Anime Completed  •  1949 Episodes Watched  •  33.5 Days Watched  •  Mean Score ★ 77.25  •  </text>
 
       <animateTransform
         attributeName="transform"
         type="translate"
         from="0 0"
-        to="-837 0"
+        to="-783.75 0"
         dur="12s"
         repeatCount="indefinite"/>
     </g>
