@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="576">
+     height="432">
 
 <text x="450"
       y="105"
@@ -8,7 +8,7 @@
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-July 2026
+August 2026
 </text>
 
 <line x1="40"
@@ -23,57 +23,39 @@ July 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    1. The Ramparts of Ice
+    1. Food Wars!
 </text>
 <text x="40" y="218"
       fill="white"
       font-size="18"
       font-family="monospace">
-    2. Dororo
+    2. K-ON!
 </text>
 <text x="40" y="266"
       fill="white"
       font-size="18"
       font-family="monospace">
-    3. Love, Chunibyo &amp; Other Delusions
+    3. Rock is a Lady’s Modesty
 </text>
 <text x="40" y="314"
       fill="white"
       font-size="18"
       font-family="monospace">
-    4. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV
-</text>
-<text x="40" y="362"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    5. Is It Wrong to Try to Pick Up Girls in a Dungeon? IV Part 2
-</text>
-<text x="40" y="410"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    6. Is It Wrong To Try To Pick Up Girls in a Dungeon? V
-</text>
-<text x="40" y="458"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    7. Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion
+    4. K-ON!: Live House!
 </text>
 <line x1="40"
-      y1="516"
+      y1="372"
       x2="860"
-      y2="516"
+      y2="372"
       stroke="#EF881A"
       stroke-width="2"/>
 
 <text x="40"
-      y="551"
+      y="407"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-    Total Completed: 7
+    Total Completed: 4
 </text>
 
 
