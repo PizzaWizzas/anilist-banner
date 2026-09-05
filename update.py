@@ -168,7 +168,7 @@ for anime_list in watching_result["data"]["MediaListCollection"]["lists"]:
 watching_width = 450
 watching_height = 40
 watching_font_size = 13
-watching_color = "#E52851"
+watching_color = "#C14127"
 
 # Timing:
 # Each character takes the same amount of time to appear/disappear,
@@ -323,7 +323,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
     <g>
       <text x="0"
             y="25"
-            fill="#E52851"
+            fill="#C14127"
             font-size="{font_size}px"
             font-family="Roboto Mono, monospace"
             xml:space="preserve"
@@ -332,7 +332,7 @@ banner_svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 
       <text x="{unit_width:.2f}"
             y="25"
-            fill="#E52851"
+            fill="#C14127"
             font-size="{font_size}px"
             font-family="Roboto Mono, monospace"
             xml:space="preserve"
@@ -393,7 +393,7 @@ anime_text += f"""
       y1="{footer_y}"
       x2="860"
       y2="{footer_y}"
-      stroke="#E52851"
+      stroke="#C14127"
       stroke-width="2"/>
 
 <text x="40"
@@ -428,7 +428,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
       y1="130"
       x2="860"
       y2="130"
-      stroke="#E52851"
+      stroke="#C14127"
       stroke-width="2"/>
 
 {anime_text}
