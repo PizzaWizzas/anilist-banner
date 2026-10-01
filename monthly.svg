@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="432">
+     height="1056">
 
 <text x="450"
       y="105"
@@ -8,7 +8,7 @@
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-August 2026
+September 2026
 </text>
 
 <line x1="40"
@@ -23,39 +23,117 @@ August 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    1. Food Wars!
+    1. Re:ZERO -Starting Life in Another World- Season 4
 </text>
 <text x="40" y="218"
       fill="white"
       font-size="18"
       font-family="monospace">
-    2. K-ON!
+    2. That Time I Got Reincarnated as a Slime Season 4
 </text>
 <text x="40" y="266"
       fill="white"
       font-size="18"
       font-family="monospace">
-    3. Rock is a Lady’s Modesty
+    3. THE GHOST IN THE SHELL
 </text>
 <text x="40" y="314"
       fill="white"
       font-size="18"
       font-family="monospace">
-    4. K-ON!: Live House!
+    4. Insomniacs After School
+</text>
+<text x="40" y="362"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    5. Food Wars! The Second Plate
+</text>
+<text x="40" y="410"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    6. Food Wars! The Third Plate
+</text>
+<text x="40" y="458"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    7. Food Wars! The Third Plate: Totsuki Train Arc
+</text>
+<text x="40" y="506"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    8. SPY x FAMILY CODE: White
+</text>
+<text x="40" y="554"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    9. Ghost in the Shell
+</text>
+<text x="40" y="602"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    10. Smoking Behind the Supermarket with You
+</text>
+<text x="40" y="650"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    11. Sparks of Tomorrow
+</text>
+<text x="40" y="698"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    12. Chainsmoker Cat
+</text>
+<text x="40" y="746"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    13. BLACK TORCH
+</text>
+<text x="40" y="794"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    14. Love Unseen Beneath the Clear Night Sky
+</text>
+<text x="40" y="842"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    15. THE GHOST IN THE SHELL
+</text>
+<text x="40" y="890"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    16. KAIJU GIRL CARAMELISE
+</text>
+<text x="40" y="938"
+      fill="white"
+      font-size="18"
+      font-family="monospace">
+    17. The Cat and the Dragon
 </text>
 <line x1="40"
-      y1="372"
+      y1="996"
       x2="860"
-      y2="372"
+      y2="996"
       stroke="#C14127"
       stroke-width="2"/>
 
 <text x="40"
-      y="407"
+      y="1031"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-    Total Completed: 4
+    Total Completed: 17
 </text>
 
 
