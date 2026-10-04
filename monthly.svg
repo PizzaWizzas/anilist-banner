@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="1056">
+     height="1008">
 
 <text x="450"
       y="105"
@@ -35,105 +35,99 @@ September 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    3. THE GHOST IN THE SHELL
+    3. Smoking Behind the Supermarket with You
 </text>
 <text x="40" y="314"
       fill="white"
       font-size="18"
       font-family="monospace">
-    4. Insomniacs After School
+    4. Sparks of Tomorrow
 </text>
 <text x="40" y="362"
       fill="white"
       font-size="18"
       font-family="monospace">
-    5. Food Wars! The Second Plate
+    5. Chainsmoker Cat
 </text>
 <text x="40" y="410"
       fill="white"
       font-size="18"
       font-family="monospace">
-    6. Food Wars! The Third Plate
+    6. BLACK TORCH
 </text>
 <text x="40" y="458"
       fill="white"
       font-size="18"
       font-family="monospace">
-    7. Food Wars! The Third Plate: Totsuki Train Arc
+    7. Love Unseen Beneath the Clear Night Sky
 </text>
 <text x="40" y="506"
       fill="white"
       font-size="18"
       font-family="monospace">
-    8. SPY x FAMILY CODE: White
+    8. THE GHOST IN THE SHELL
 </text>
 <text x="40" y="554"
       fill="white"
       font-size="18"
       font-family="monospace">
-    9. Ghost in the Shell
+    9. KAIJU GIRL CARAMELISE
 </text>
 <text x="40" y="602"
       fill="white"
       font-size="18"
       font-family="monospace">
-    10. Smoking Behind the Supermarket with You
+    10. The Cat and the Dragon
 </text>
 <text x="40" y="650"
       fill="white"
       font-size="18"
       font-family="monospace">
-    11. Sparks of Tomorrow
+    11. Insomniacs After School
 </text>
 <text x="40" y="698"
       fill="white"
       font-size="18"
       font-family="monospace">
-    12. Chainsmoker Cat
+    12. Food Wars! The Second Plate
 </text>
 <text x="40" y="746"
       fill="white"
       font-size="18"
       font-family="monospace">
-    13. BLACK TORCH
+    13. Food Wars! The Third Plate
 </text>
 <text x="40" y="794"
       fill="white"
       font-size="18"
       font-family="monospace">
-    14. Love Unseen Beneath the Clear Night Sky
+    14. Food Wars! The Third Plate: Totsuki Train Arc
 </text>
 <text x="40" y="842"
       fill="white"
       font-size="18"
       font-family="monospace">
-    15. THE GHOST IN THE SHELL
+    15. SPY x FAMILY CODE: White
 </text>
 <text x="40" y="890"
       fill="white"
       font-size="18"
       font-family="monospace">
-    16. KAIJU GIRL CARAMELISE
-</text>
-<text x="40" y="938"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    17. The Cat and the Dragon
+    16. Ghost in the Shell
 </text>
 <line x1="40"
-      y1="996"
+      y1="948"
       x2="860"
-      y2="996"
+      y2="948"
       stroke="#C14127"
       stroke-width="2"/>
 
 <text x="40"
-      y="1031"
+      y="983"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-    Total Completed: 17
+    Total Completed: 16
 </text>
 
 
