@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900"
-     height="1008">
+     height="336">
 
 <text x="450"
       y="105"
@@ -8,7 +8,7 @@
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-September 2026
+October 2026
 </text>
 
 <line x1="40"
@@ -23,111 +23,27 @@ September 2026
       fill="white"
       font-size="18"
       font-family="monospace">
-    1. Re:ZERO -Starting Life in Another World- Season 4
+    1. The Apothecary Diaries
 </text>
 <text x="40" y="218"
       fill="white"
       font-size="18"
       font-family="monospace">
-    2. That Time I Got Reincarnated as a Slime Season 4
-</text>
-<text x="40" y="266"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    3. Smoking Behind the Supermarket with You
-</text>
-<text x="40" y="314"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    4. Sparks of Tomorrow
-</text>
-<text x="40" y="362"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    5. Chainsmoker Cat
-</text>
-<text x="40" y="410"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    6. BLACK TORCH
-</text>
-<text x="40" y="458"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    7. Love Unseen Beneath the Clear Night Sky
-</text>
-<text x="40" y="506"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    8. THE GHOST IN THE SHELL
-</text>
-<text x="40" y="554"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    9. KAIJU GIRL CARAMELISE
-</text>
-<text x="40" y="602"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    10. The Cat and the Dragon
-</text>
-<text x="40" y="650"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    11. Insomniacs After School
-</text>
-<text x="40" y="698"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    12. Food Wars! The Second Plate
-</text>
-<text x="40" y="746"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    13. Food Wars! The Third Plate
-</text>
-<text x="40" y="794"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    14. Food Wars! The Third Plate: Totsuki Train Arc
-</text>
-<text x="40" y="842"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    15. SPY x FAMILY CODE: White
-</text>
-<text x="40" y="890"
-      fill="white"
-      font-size="18"
-      font-family="monospace">
-    16. Ghost in the Shell
+    2. You and I Are Polar Opposites Season 2
 </text>
 <line x1="40"
-      y1="948"
+      y1="276"
       x2="860"
-      y2="948"
+      y2="276"
       stroke="#C14127"
       stroke-width="2"/>
 
 <text x="40"
-      y="983"
+      y="311"
       fill="#b0b0b0"
       font-size="18"
       font-family="monospace">
-    Total Completed: 16
+    Total Completed: 2
 </text>
 
 
